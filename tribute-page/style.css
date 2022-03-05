@@ -103,3 +103,26 @@ a:hover {
   background-color: #000000;
   color: #fff;
 }
+
+/* Media Queries */
+/* 820 x 1180 */
+@media only screen
+  and (max-device-width: 820px) {
+    
+    #header-img {
+      height: 40vh;
+    }
+
+    #title {
+      font-size: 2em;
+    }
+
+    #tribute-info {
+      font-size: 20px;
+    }
+
+    #image, #img-caption, #tribute-info, #the-founders {
+      width: 80%;
+    }
+}
+
