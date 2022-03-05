@@ -79,8 +79,9 @@ a:hover {
 
 /* tooltip */
 .name {
-    color: #555555;
+    color: #A2AAAD;
     text-align: center;
+    font-weight: 900;
 }
 
 .tooltip .tooltiptext {
@@ -95,4 +96,9 @@ a:hover {
     visibility: visible;
     font-size: 20px;
     padding: 5px;
+}
+
+.name:hover {
+    background-color: #000000;
+    color: #fff;
 }
