@@ -23,88 +23,216 @@
     <div id="content">
       <div id="personal-details">
         <h1>Personal Details</h1>
-        <form action="#" id="survey-form" class="form-fields">
-          <div class="profile">
-            <div class="image-upload">
-              <img src="https://image-placeholder.com/images/actual-size/160x160.png" />
-            </div>
-            <div class="basic-info">
+        <form action="#" id="survey-form">
+          <div id="form-fields">
+            <div class="profile">
+              <div class="image-upload">
+                <img src="https://image-placeholder.com/images/actual-size/160x160.png" />
+              </div>
+              <div class="basic-info">
+                <div>
+                  <input type="text" name="firstName">
+                  <label for="firstName">First Name</label>
+                </div>
+                <div>
+                  <input type="text" name="lastName">
+                  <label for="lastName">Last Name</label>
+                </div>
+                <div>
+                  <input type="text" name="jobTitle">
+                  <label for="jobTitle">Job Title</label>
+                </div>
+              </div>
+            </div> 
+            <div class="sub-title">Contact Details</div>
+            <div class="contact-details">
               <div>
-                <input type="text" name="firstName">
-                <label for="firstName">First Name</label>
+                <input type="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="sample@gmail.com">
+                <label for="email" id="email-label">Email</label>
               </div>
               <div>
-                <input type="text" name="lastName">
-                <label for="lastName">Last Name</label>
+                <input type="number" id="number">
+                <label for="email" id="number-label">Phone Number</label>
               </div>
               <div>
-                <input type="text" name="jobTitle">
-                <label for="jobTitle">Job Title</label>
+                <input type="text">
+                <label for="personal-website">Personal Website</label>
               </div>
             </div>
-          </div> 
-          <div class="sub-title">Contact Details</div>
-          <div class="contact-details">
-            <div>
-              <input type="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="sample@gmail.com">
-              <label for="email" id="email-label">Email</label>
-            </div>
-            <div>
-              <input type="number" id="number">
-              <label for="email" id="number-label">Phone Number</label>
-            </div>
-            <div>
-              <input type="text">
-              <label for="personal-website">Personal Website</label>
+            <div class="sub-title">Location</div>
+            <div class="location">
+              <select name="city" id="city">
+                <option value="select city">Select City</option>
+                <option value="manila">Manila</option>
+                <option value="quezon city">Quezon City</option>
+                <option value="davao city">Davao City</option>
+                <option value="cagayan de oro">Cagayan de Oro</option>
+                <option value="cebu city">Cebu City</option>
+                <option value="makati">Makati</option>
+                <option value="zamboanga">Zamboanga</option>
+                <option value="iloilo city">Iloilo City</option>
+                <option value="baguio">Baguio</option>
+              </select>
+              <select name="region" id="regions">
+                <option value="select city">Select Region</option>
+                <option value="region 1">Region 1</option>
+                <option value="region 2">Region 2</option>
+                <option value="region 3">Region 3</option>
+                <option value="region 4">Region 4</option>
+                <option value="region 5">Region 5</option>
+                <option value="region 6">Region 6</option>
+                <option value="region 7">Region 7</option>
+                <option value="region 8">Region 8</option>
+                <option value="region 9">Region 9</option>
+              </select>
             </div>
           </div>
-          <div class="sub-title">Location</div>
-          <div class="location">
-            <select name="city" id="city">
-              <option value="select city">Select City</option>
-              <option value="manila">Manila</option>
-              <option value="quezon city">Quezon City</option>
-              <option value="davao city">Davao City</option>
-              <option value="cagayan de oro">Cagayan de Oro</option>
-              <option value="cebu city">Cebu City</option>
-              <option value="makati">Makati</option>
-              <option value="zamboanga">Zamboanga</option>
-              <option value="iloilo city">Iloilo City</option>
-              <option value="baguio">Baguio</option>
-            </select>
-            <select name="region" id="regions">
-              <option value="select city">Select Region</option>
-              <option value="region 1">Region 1</option>
-              <option value="region 2">Region 2</option>
-              <option value="region 3">Region 3</option>
-              <option value="region 4">Region 4</option>
-              <option value="region 5">Region 5</option>
-              <option value="region 6">Region 6</option>
-              <option value="region 7">Region 7</option>
-              <option value="region 8">Region 8</option>
-              <option value="region 9">Region 9</option>
-            </select>
-          </div>
-
         </form>
       </div>
       <div id="experience">
         <h1>Experience</h1>
+        <button>Add Experience</button>
+        <div id="form-fields">
+          <div>
+            <input type="text" name="jobTitle">
+            <label for="Job title">Job Title</label>
+          </div>
+          <div>
+            <input type="text">
+            <label for="Company">Company or Project Name</label>
+          </div>
+          <div>
+            <select name="month">
+              <option value="january">January</option>
+              <option value="february">February</option>
+            </select>
+            <select name="year">
+              <option value="2022">2022</option>
+              <option value="2021">2021</option>
+            </select>
+            <span> - </span>
+            <select name="month">
+              <option value="january">January</option>
+              <option value="february">February</option>
+            </select>
+            <select name="year">
+              <option value="2022">2022</option>
+              <option value="2021">2021</option>
+            </select>
+          </div>
+          <div class="sub-title">Accomplishments</div>
+          <textarea name="accomplishments" id="accomplishments" cols="30" rows="10"></textarea>
+        </div>
       </div>
       <div id="education">
         <h1>Education</h1>
+        <button>Add Education</button>
+        <div id="form-fields">
+          <div>
+            <input type="text" name="university">
+            <label for="university">University/School</label>
+          </div>
+          <div>
+            <input type="text" name="degree">
+            <label for="degree">Degree(E.g. Bachelor's degree, High school</label>
+          </div>
+          <div>
+            <select name="year" id="year">
+              <option value="graduation">Graduation Year</option>
+              <option value="2021">2021</option>
+              <option value="2020">2020</option>
+            </select>
+          </div>
+          <div>
+            <input type="text" name="fieldOfStufy">
+            <label for="university">Field of Study</label>
+          </div>
+          <div class="sub-title">Achievements</div>
+          <textarea name="achievements" id="achievements" cols="30" rows="10"></textarea>
+        </div>
       </div>
       <div id="skills">
         <h1>Skills</h1>
+        <div id="form-fields">
+          <div class="sub-title">Leadership and Management</div>
+          <div>
+            <input type="radio" name="lam" value="advising">
+            <label for="advising">Advising</label>
+            <input type="radio" name="lam" value="coaching">
+            <label for="coaching">Coaching</label>
+            <input type="radio" name="lam" value="conflict">
+            <label for="conflict">Conflict Resolution</label>
+          </div>
+          <div class="sub-title">Professionalism Skills</div>
+          <div>
+            <input type="radio" name="prof" value="honesty">
+            <label for="honesty">Honesty</label>
+            <input type="radio" name="prof" value="patience">
+            <label for="patience">Patience</label>
+            <input type="radio" name="prof" value="conflict">
+            <label for="conflict">Conflict Resolution</label>
+          </div>
+          <div class="sub-title">Analytical Skills</div>
+          <div>
+            <input type="radio" name="analytical" value="critical">
+            <label for="critical">Critical Thinking</label>
+            <input type="radio" name="analytical" value="research">
+            <label for="research">Research</label>
+            <input type="radio" name="analytical" value="numeracy">
+            <label for="numeracy">Numeracy</label>
+          </div>
+        </div>
       </div>
       <div id="languages">
         <h1>Languages</h1>
+        <div id="form-fields">
+          <div>
+            <input type="checkbox" name="languages" value="english">English
+            <input type="checkbox" name="languages" value="tagalog">Tagalog
+            <input type="checkbox" name="languages" value="chinese">Chinese
+          </div>
+        </div>
       </div>
       <div id="certificates">
         <h1>Certificates</h1>
+        <button>Add a Certificate</button>
+        <div id="form-fields">
+          <div>
+            <input type="text" name="certification">
+            <label for="certification">Certification Name</label>
+          </div>
+          <div>
+            <select name="month">
+              <option value="january">January</option>
+              <option value="february">February</option>
+            </select>
+            <select name="year">
+              <option value="2022">2022</option>
+              <option value="2021">2021</option>
+            </select>
+            <span> - </span>
+            <select name="month">
+              <option value="january">January</option>
+              <option value="february">February</option>
+            </select>
+            <select name="year">
+              <option value="2022">2022</option>
+              <option value="2021">2021</option>
+            </select>
+          </div>
+          <div>
+            <input type="checkbox" name="expire" value="expire"> Does not expire
+          </div>
+        </div>
       </div>
       <div id="summary">
         <h1>Summary</h1>
+        <div id="form-fields">
+          <div>
+            <div class="sub-title">Your Professional Summary</div>
+            <textarea name="short" id="short" cols="30" rows="10"></textarea>
+          </div>
+        </div>
       </div>
     </div>
 

@@ -55,7 +55,7 @@ body {
   padding-top: 50px;
 }
 
-.form-fields {
+#form-fields {
   box-sizing: border-box;
   padding: 32px;
   border-radius: 16px;
@@ -109,4 +109,9 @@ select {
   border: 0;
   border-bottom: 1px solid #eee;
   background-color: #fff;
+}
+
+/* experience */
+textarea {
+  width: 100%;
 }
