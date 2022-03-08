@@ -2,15 +2,6 @@ body {
   font-family: Roboto, sans-serif;
 }
 
-/* top-nav */
-#top-nav {
-  z-index: 100000;
-  position: relative;
-  height: 36px;
-  line-height: 36px;
-  overflow: hidden;
-}
-
 /* sidebar */
 #main {
   display: flex;
@@ -18,22 +9,23 @@ body {
 
 #sidebar {
   height: 100vh;
-  width: 200px;
-  background-color: lightblue;
+  width: 300px;
   position: fixed;
   z-index: 1;
   overflow-x: hidden;
 }
 
 #sidebar a {
-  padding: 8px;
-  font-size: 24px;
   display: block;
+  padding: 20px;
+  font-size: 24px;
+  text-decoration: none;
 }
 
-.sidebar a:hover {
+#sidebar a:hover {
   cursor: pointer;
-  opacity: .7;
+  color: #fff;
+  background-color: #000;
 }
 
 #content {
@@ -43,6 +35,12 @@ body {
   margin-right: auto;
   width: 50%;
 }
+
+/* nav */
+nav {
+  padding: 50px 10px 50px 10px;
+}
+
 
 /* survey-form */
 #survey-form {
@@ -114,4 +112,21 @@ select {
 /* experience */
 textarea {
   width: 100%;
+}
+
+#add-btn {
+  width: 100%;
+  height: 48px;
+  box-sizing: border-box;
+  text-align: center;
+  border: 1px dashed rgba(0,0,0,.16);
+  border-radius: 24px;
+  background-color: #fff;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+#add-btn:hover {
+  background-color: #0C66FF;
+  color: #fff;
 }
