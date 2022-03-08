@@ -30,7 +30,7 @@ li a {
 }
 
 #sidebar {
-  height: 100%;
+  height: 90vh;
   width: 200px;
   background-color: lightblue;
 }
@@ -46,7 +46,30 @@ li a {
   opacity: .7;
 }
 
-#body-text {
-  margin-left: 150x;
-  font-size: 18px;
+#content {
+  background-color: #fff;
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+/* survey-form */
+#survey-form {
+  display: flex;
+  flex-direction: column;
+}
+
+#personal details, #experience, #education, #skills {
+  height: 90vh;
+}
+
+.form-fields {
+  box-sizing: border-box;
+  padding: 32px;
+  border-radius: 16px;
+  background-color: #fff;
+  border: 1px solid #eee;
+  box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 4%);
 }
