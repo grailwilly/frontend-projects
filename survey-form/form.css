@@ -2,29 +2,13 @@ body {
   font-family: Roboto, sans-serif;
 }
 
-/* navbar */
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+/* top-nav */
+#top-nav {
+  z-index: 100000;
+  position: relative;
+  height: 36px;
+  line-height: 36px;
   overflow: hidden;
-  background-color: azure;
-}
-
-li {
-  float: right;
-}
-
-#logo {
-  float: left;
-}
-
-li a {
-  display: block;
-  color: #000000;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
 }
 
 /* sidebar */
@@ -33,7 +17,7 @@ li a {
 }
 
 #sidebar {
-  height: 90vh;
+  height: 100vh;
   width: 200px;
   background-color: lightblue;
   position: fixed;
@@ -54,7 +38,6 @@ li a {
 
 #content {
   background-color: #fff;
-  width: 100%;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -67,8 +50,9 @@ li a {
   flex-direction: column;
 }
 
-#personal details, #experience, #education, #skills {
-  height: 90vh;
+#personal-details, #experience, #education, #skills, #languages, #certificates, #summary{
+  height: 100vh;
+  padding-top: 50px;
 }
 
 .form-fields {
