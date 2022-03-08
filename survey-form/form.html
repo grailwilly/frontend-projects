@@ -33,44 +33,69 @@
     <div id="content">
       <div id="personal-details">
         <h1>Personal Details</h1>
-        <form action="#" id="survey-form" class="form-fields"> 
-          <label for="name" id="name-label">Name</label>
-          <input type="text" id="name" placeholder="First Name, Last Name" required> 
-          <label for="email" id="email-label">Email</label>
-          <input type="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="sample@gmail.com">
-            <!-- User story #6 validation error email --> 
-          <label for="number" id="number-label">Number</label>
-          <input type="number" id="number" placeholder="No of orders" min="1" max="5">
-            <!-- User story #6 validation error non-number input and min and max attributes --> 
-          
-          <!-- select -->
-          <label for="unknown">Unknown</label>
-          <select name="unknown" id="dropdown">
-            <option value="option1">Option1</option>
-            <option value="option2">Option2</option>
-            <option value="option3">Option3</option>
-          </select>
-      
-          <!-- radio buttons  -->
-          <label for="fav-radio">Fav Radio</label>
-          <input type="radio" name="fav-radio" value="radio1">
-          <label for="radio1">radio1</label>
-          <input type="radio" name="fav-radio" value="radio2">
-          <label for="radio2">radio2</label>
-          <input type="radio" name="fav-radio" value="radio3">
-          <label for="radio3">radio3</label>
-          
-          <!-- check boxes -->
-          <legend>Check multiple</legend>
-          <input type="checkbox" name="multipleCheck" value="check1">check1
-          <input type="checkbox" name="multipleCheck" value="check2">check2
-          <input type="checkbox" name="multipleCheck" value="check3">check3
-      
-          <!-- text area -->
-          <textarea name="comments" cols="30" rows="10"></textarea>
-      
-          <!-- submit button -->
-          <input type="submit" value="Submit"> <!-- sumbit my inputs to the  address bar-->
+        <form action="#" id="survey-form" class="form-fields">
+          <div class="profile">
+            <div class="image-upload">
+              <img src="https://image-placeholder.com/images/actual-size/160x160.png" />
+            </div>
+            <div class="basic-info">
+              <div>
+                <input type="text" name="firstName">
+                <label for="firstName">First Name</label>
+              </div>
+              <div>
+                <input type="text" name="lastName">
+                <label for="lastName">Last Name</label>
+              </div>
+              <div>
+                <input type="text" name="jobTitle">
+                <label for="jobTitle">Job Title</label>
+              </div>
+            </div>
+          </div> 
+          <div class="sub-title">Contact Details</div>
+          <div class="contact-details">
+            <div>
+              <input type="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="sample@gmail.com">
+              <label for="email" id="email-label">Email</label>
+            </div>
+            <div>
+              <input type="number" id="number">
+              <label for="email" id="number-label">Phone Number</label>
+            </div>
+            <div>
+              <input type="text">
+              <label for="personal-website">Personal Website</label>
+            </div>
+          </div>
+          <div class="sub-title">Location</div>
+          <div class="location">
+            <select name="city" id="city">
+              <option value="select city">Select City</option>
+              <option value="manila">Manila</option>
+              <option value="quezon city">Quezon City</option>
+              <option value="davao city">Davao City</option>
+              <option value="cagayan de oro">Cagayan de Oro</option>
+              <option value="cebu city">Cebu City</option>
+              <option value="makati">Makati</option>
+              <option value="zamboanga">Zamboanga</option>
+              <option value="iloilo city">Iloilo City</option>
+              <option value="baguio">Baguio</option>
+            </select>
+            <select name="region" id="regions">
+              <option value="select city">Select Region</option>
+              <option value="region 1">Region 1</option>
+              <option value="region 2">Region 2</option>
+              <option value="region 3">Region 3</option>
+              <option value="region 4">Region 4</option>
+              <option value="region 5">Region 5</option>
+              <option value="region 6">Region 6</option>
+              <option value="region 7">Region 7</option>
+              <option value="region 8">Region 8</option>
+              <option value="region 9">Region 9</option>
+            </select>
+          </div>
+
         </form>
       </div>
       <div id="experience">
