@@ -9,7 +9,6 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: azure;
 }
 
 li {
@@ -18,6 +17,12 @@ li {
 
 #logo {
   float: left;
+  text-transform: uppercase;
+}
+
+#logo a {
+  color: #ff4554;
+  font-weight: 900;
 }
 
 li a {
@@ -33,17 +38,37 @@ li a {
   background-image: url("./assets/cover-image.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 80vh;
+  height: 95vh;
 }
 
 #header-text {
   display: flex;
   flex-direction: column;
-  width: 50%;
-  margin-left: 50px;
-  margin-right: 50px;
+  justify-content: center;
+  align-items: center;
+  height: 95vh;
+}
+
+#title {
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 72px;
+  color: #fff;
+}
+
+#description {
+  background-color: #000000;
+  color: #fff;
+  font-size: 22px;
 }
 
 button {
-  width: 30%;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 24px;
+  padding: 12px 32px;
+  border-radius: 6px;
+  border: none;
+  background-color: #0C66FF;
+  color: #fff;
 }
