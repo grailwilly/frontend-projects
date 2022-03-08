@@ -31,11 +31,11 @@
               </div>
               <div class="basic-info">
                 <div>
-                  <input type="text" name="firstName">
+                  <input type="text" name="firstName" required>
                   <label for="firstName">First Name</label>
                 </div>
                 <div>
-                  <input type="text" name="lastName">
+                  <input type="text" name="lastName" required>
                   <label for="lastName">Last Name</label>
                 </div>
                 <div>
@@ -47,16 +47,16 @@
             <div class="sub-title">Contact Details</div>
             <div class="contact-details">
               <div>
-                <input type="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="sample@gmail.com">
-                <label for="email" id="email-label">Email</label>
+                <input type="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                <label for="email" id="email-label">Email <span>(E.g. sample@gmail.com)</span></label>
               </div>
               <div>
                 <input type="number" id="number">
-                <label for="email" id="number-label">Phone Number</label>
+                <label for="number" id="number-label">Phone Number</label>
               </div>
               <div>
                 <input type="text">
-                <label for="personal-website">Personal Website</label>
+                <label for="personal-website">Personal Website<span>(Optional)</span></label>
               </div>
             </div>
             <div class="sub-title">Location</div>
