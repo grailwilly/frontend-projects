@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  font-family: poppins, sans-serif;
 }
 
 /* navbar */
@@ -25,4 +26,24 @@ li a {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+}
+
+/* header */
+#cover-img {
+  background-image: url("./assets/cover-image.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80vh;
+}
+
+#header-text {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+button {
+  width: 30%;
 }
