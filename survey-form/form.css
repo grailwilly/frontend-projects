@@ -23,3 +23,30 @@ li a {
   padding: 14px 16px;
   text-decoration: none;
 }
+
+/* sidebar */
+#main {
+  display: flex;
+}
+
+#sidebar {
+  height: 100%;
+  width: 200px;
+  background-color: lightblue;
+}
+
+#sidebar a {
+  padding: 8px;
+  font-size: 24px;
+  display: block;
+}
+
+.sidebar a:hover {
+  cursor: pointer;
+  opacity: .7;
+}
+
+#body-text {
+  margin-left: 150x;
+  font-size: 18px;
+}
