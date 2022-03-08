@@ -72,20 +72,6 @@ nav {
   padding: 30px;
 }
 
-input {
-  box-sizing: border-box;
-  width: 100%;
-  padding-bottom: 4px;
-  border: 0;
-  border-bottom: 1px solid #eee;
-  height: 30px;
-}
-
-label {
-  color: #bbb;
-  opacity: 1;
-}
-
 .sub-title {
   margin-top: 30px;
   margin-bottom: 30px;
@@ -101,6 +87,40 @@ label {
   justify-content: space-evenly;
 }
 
+/* form fields  */
+input {
+  box-sizing: border-box;
+  width: 100%;
+  padding-bottom: 4px;
+  border: 0;
+  border-bottom: 1px solid #eee;
+  height: 30px;
+}
+
+input[type="radio"], input[type="checkbox"] {
+  width: 20px;
+}
+
+.skills-label, .speak-label {
+  position: relative;
+  bottom: 8px;
+}
+
+#speak {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="radio"]:checked+label, input[type="checkbox"]:checked+label { 
+  background-color: #FFFF00;
+  color: #000; 
+}
+
+label {
+  color: #bbb;
+  opacity: 1;
+}
+
 select {
   width: 40%;
   padding: 20px;
@@ -109,7 +129,6 @@ select {
   background-color: #fff;
 }
 
-/* experience */
 textarea {
   width: 100%;
 }
