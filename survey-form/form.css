@@ -5,6 +5,8 @@ body {
 /* sidebar */
 #main {
   display: flex;
+  font-weight: 900;
+  text-decoration: none;
 }
 
 #sidebar {
