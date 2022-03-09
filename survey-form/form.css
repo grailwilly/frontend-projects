@@ -43,7 +43,7 @@ nav {
 
 
 /* survey-form */
-#survey-form {
+.image-name {
   display: flex;
   flex-direction: column;
 }
@@ -114,6 +114,19 @@ input[type="radio"], input[type="checkbox"] {
 input[type="radio"]:checked+label, input[type="checkbox"]:checked+label { 
   background-color: #FFFF00;
   color: #000; 
+}
+
+#submit-button {
+  margin-top: 300px;
+}
+
+input[type="submit"] {
+  border-radius: 16px;
+  background-color: #ff4554;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 700;
+  height: 100%;
 }
 
 label {
