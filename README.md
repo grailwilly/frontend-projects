@@ -1,7 +1,7 @@
 # batch18-fe-activities
 
 ## Projects
-1. Tribute Page 
+1. [**Tribute Page**](https://github.com/grailwilly/batch18-fe-activities/tree/main/tribute-page) 
     - Tools: Visual Code, HTML & CSS
     - Colors: grey and black
     - Font: Sans Serif
@@ -9,10 +9,10 @@
 
 ![apple'sFounder](tribute-page/assets/tributePageScreenshot.png)
 
-2. Survey Form
+2. [**Survey Form**](https://github.com/grailwilly/batch18-fe-activities/tree/main/survey-form)
     - Tools: Visual Code, HTML & CSS
     - Theme: Resume Builder
-    - To do: improve field inputs sizes, labels on top, pick better color palettes, and validation erro message.
+    - To do: improve field inputs sizes, labels on top, pick better color palettes, and validation error message.
 
 ![Landing Page](survey-form/assets/landing-page.png)
 
