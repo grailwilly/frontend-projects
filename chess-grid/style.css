@@ -1,0 +1,18 @@
+#board {
+  display: grid;
+  grid-template-columns: repeat(9,50px);
+  grid-template-rows: repeat(8, 50px);
+  justify-content: center;
+  margin-left: 50px;
+  margin-bottom: 100px;
+}
+#board div {
+  border: 1px solid black;
+}
+#board div:nth-child(odd) {
+  background-color: brown;
+}
+#board div:nth-child(9n+0) {
+  background-color: transparent;
+  border: none;
+}
