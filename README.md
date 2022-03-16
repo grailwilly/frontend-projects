@@ -19,3 +19,10 @@
 ![Form](survey-form/assets/form.png)
 
 ![Resume Templates](survey-form/assets/resume-templates.png)
+
+3. **Chessboard** - [**Flex**](https://github.com/grailwilly/batch18-fe-activities/tree/main/chessboard-flex) and [**Grid CSS**](https://github.com/grailwilly/batch18-fe-activities/tree/main/chessboard-grid)
+    - Tools: Visual Code, HTML & CSS
+    - Web responsive using Flex and Grid CSS
+
+  ![Chess Flex](chessboard-flex/asset/chess-flex.png)
+  ![Chess Flex](chessboard-grid/asset/chess-grid.png)  
