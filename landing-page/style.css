@@ -164,14 +164,15 @@ body {
 }
 
 /* Call to action */
-#view-all {
+#view-all, #know-more {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 5%;  
+  margin-top: 5%;
+  margin-bottom: 5%;  
 }
 
-.view-all-link {
+.view-all-link, .know-more-link {
   border: 1px solid #000;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -180,9 +181,20 @@ body {
   color: #000;
   text-decoration: none;
   padding: 21px 69px;
+  letter-spacing: 1.5px;
 }
 
-.view-all-link:hover {
+.view-all-link:hover, .know-more-link:hover {
   background-color: #BF2548;
   color: #fff;
+}
+
+/* about-us */
+iframe {
+  display: block;
+  align-self: center;
+  width: 70%;
+  height: 60vh;
+  margin-right: auto;
+  margin-left: auto;
 }
