@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
 body {
   margin: 0;
   padding: 0;
@@ -100,4 +102,87 @@ body {
   position: relative;
   top: -60px;
   width: 70%;
+}
+
+/* traders section */
+#sub-header {
+  text-align: center;
+}
+
+.leaf-separator {
+  font-size: 60px;
+  margin: 0;
+}
+
+.sub-title {
+  font-family: 'Caveat', cursive;
+  font-size: 60px;
+  font-weight: 500;
+  text-transform: capitalize;
+  letter-spacing: 0.20em;
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+.card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
+  grid-gap: 1rem;
+  place-content: center;
+  justify-items: center;
+  min-height: 50vh;
+  margin: 0;
+  padding-right: 2rem;
+  line-height: 1.5;
+  list-style: none;
+}
+
+.card {
+  border-radius: 0.5rem;
+  box-shadow: 0.05rem 0.1rem 0.3rem -0.03rem rgba(0, 0, 0, 0.45);
+}
+
+.card-title {
+  margin-top: 1rem;
+  font-size: 19px;
+  text-align: center;
+  color: #010101;
+  text-decoration: none;
+} 
+
+.card-desc {
+  text-align: center;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.card-img {
+  border-radius: 0.5rem 0.5rem 0 0;
+  width: 100%;
+  object-fit: cover;
+  max-height: max(10rem, 30vh);
+}
+
+/* Call to action */
+#view-all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;  
+}
+
+.view-all-link {
+  border: 1px solid #000;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: inline-block;
+  font-size: 25px;
+  color: #000;
+  text-decoration: none;
+  padding: 21px 69px;
+}
+
+.view-all-link:hover {
+  background-color: #BF2548;
+  color: #fff;
 }
