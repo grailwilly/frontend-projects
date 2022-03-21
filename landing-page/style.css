@@ -25,6 +25,9 @@ body {
 /* nav bar - navlinks*/
 #header {
   height: 40vh;
+  position: fixed;
+  width: 100%;
+  top: 0;
 }
 
 #nav-bar {
@@ -50,6 +53,11 @@ body {
   height: 35vh;
 }
 
+.logo-text {
+  color: rgb(157, 166, 83);
+  text-decoration: none;
+}
+
 .nav-link {
   color: #111;
   text-decoration: none;
@@ -58,6 +66,10 @@ body {
 
 .nav-link:nth-of-type(n+3) {
   order: 2;
+}
+
+main {
+  margin-top: 20%;
 }
 
 /* cover-photo */
@@ -99,8 +111,6 @@ body {
 .intro-desc {
   font-size: 30px;
   line-height: 43px;
-  position: relative;
-  top: -60px;
   width: 70%;
 }
 
