@@ -77,3 +77,27 @@ body {
   width: 60%;
   color: #fff;
 }
+
+/* introduction */
+#introduction {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.intro-title {
+  font-size: 100px;
+  width: 50%;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.intro-desc {
+  font-size: 30px;
+  line-height: 43px;
+  position: relative;
+  top: -60px;
+  width: 70%;
+}
