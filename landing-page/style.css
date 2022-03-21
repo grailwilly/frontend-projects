@@ -198,3 +198,62 @@ iframe {
   margin-right: auto;
   margin-left: auto;
 }
+
+/* sign up */
+#sign-up {
+  display: flex;
+}
+
+.col-left {
+  width: 50%;
+}
+
+.col-left img {
+  width: 100%;
+}
+
+.col-right {
+  background-color: #e2e2e2;
+  padding: 51px 20px 0;
+  width: 50%;
+}
+
+.col-right h3 {
+  letter-spacing: 0.05em;
+  font-size: 40px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.col-right p {
+  letter-spacing: 0.05em;
+  font-size: 25px;
+  line-height: 25px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.sign-up-form form {
+  display: flex;
+  flex-direction: column;
+  padding-left: 200px;
+  padding-right: 183px;
+}
+
+form input[type='email'], input[type='submit'] {
+  background: transparent;
+  font-size: 25px;
+  line-height: 25px;
+  padding: 8px 12px;
+  border: 1px solid #000;
+  margin-bottom: 10px;
+}
+
+form input[type='submit'] {
+  text-transform: uppercase;
+}
+
+form input[type='submit']:hover {
+  background-color: #BF2548;
+  color: #fff;
+}
