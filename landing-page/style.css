@@ -60,5 +60,20 @@ body {
 
 /* cover-photo */
 #banner {
-  background-image: url("/assets/cover-photo.jpeg");
+  background-image: url("assets/cover-photo.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 55vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-text {
+  font-size: 60px;
+  text-transform: uppercase;
+  font-family: "GothamHTF-Bold", Arial, Helvetica, sans-serif;
+  text-align: center;
+  width: 60%;
+  color: #fff;
 }
