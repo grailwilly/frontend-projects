@@ -258,6 +258,14 @@ form input[type='submit']:hover {
   color: #fff;
 }
 
+/* success message */
+.success-message {
+  color: #468847;
+  text-align: center;
+  padding-left: 93px;
+  padding-right: 76px;
+}
+
 /* footer */
 footer {
   width: 100%;
