@@ -7,7 +7,8 @@
   <title>Hyperlocal Market</title>
   <link rel="icon" href="./assets/logo_pear.png" type="image/x-icon">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="mobile.css">
+  <link rel="stylesheet" href="mobile-nav.css">
+  <link rel="stylesheet" href="media-query.css">
 </head>
 <body>
   <div id="header">
@@ -25,7 +26,7 @@
     </nav>
     <!--- Mobile Responsive -->
     <nav id="mobile-nav-bar" class="mobile-responsive">
-      <a href="#" class="nav-logo">Hyperlocal Market</a>
+      <a href="#" class="nav-logo"><img src="assets/logo_pear.png" alt="Logo"></a>
       <ul class="nav-menu">
         <li class="nav-item">
           <a href="#" class="mobile-nav-link">About</a>
@@ -104,7 +105,7 @@
       <h3>Sign Up To The Market Table</h3>
       <p>Hear our latest news, hot off the press in our monthly e-newsletter. Meet new traders, discover exciting events, try delicious recipes and access exclusive promotions</p>
       <div class="sign-up-form">
-        <form action="successful-registration.html">
+        <form action="successful-registration.html" id="subscribe">
           <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Enter your email address">
           <input type="submit" value="Submit">
         </form>

@@ -1,10 +1,10 @@
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 992px) {
   nav#nav-bar.desktop-responsive {
     display: none;
   }
 }
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 992px) {
   nav#mobile-nav-bar.mobile-responsive {
     display: none;
   }
@@ -25,6 +25,7 @@
   align-items: center;
   padding: 1rem 1.5rem;
   border-bottom: 1px solid #E2E8F0;
+  background-color: #fff;
 }
 
 .hamburger {
@@ -61,16 +62,17 @@
   color: #482ff7;
 }
 
-.nav-logo {
-  color: rgb(157, 166, 83);
-  text-decoration: none;
+.nav-logo img {
+  /* color: rgb(157, 166, 83);
+  text-decoration: none; */
+  width: 50%;
 }
 
 @media only screen and (max-width: 768px) {
   .nav-menu {
     position: fixed;
     left: -105%;
-    top: 5rem;
+    top: 8rem;
     flex-direction: column;
     background-color: #fff;
     width: 100%;
@@ -105,7 +107,16 @@
     transform: translateY(-8px) rotate(-45deg);
   }
 
+  .nav-logo {
+    width: 20%;
+  }
+
 }
 
+@media only screen and (max-width: 412px) {
+  .nav-menu {
+    left: -110%;
+  }
+}
 
 
