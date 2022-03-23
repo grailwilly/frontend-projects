@@ -269,6 +269,10 @@ form input[type='submit']:hover {
 }
 
 /* success message */
+#message {
+  margin-top: 25%;
+}
+
 .success-message {
   color: #468847;
   text-align: center;
