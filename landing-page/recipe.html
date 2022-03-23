@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe</title>
+  <link rel="icon" href="./assets/logo_pear.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="recipe.css">
+  <link rel="stylesheet" href="mobile-nav.css">
+  <link rel="stylesheet" href="media-query.css">
+</head>
+<body>
+  <div id="header">
+    <div id="top">
+      <h2 class="global-message">Get Ready For Rawfoodfest 2022 From March 28-31</h2>
+    </div>
+    <nav id="nav-bar" class="desktop-responsive">
+      <div id="header-img">
+        <a href="/" alt="home"><img src="assets/logo_pear.png" alt="Logo" class="logo"></a>
+      </div>
+      <a href="#about-us" class="nav-link">About</a>
+      <a href="#traders" class="nav-link">Traders</a>
+      <a href="#" class="nav-link">Recipes</a>
+      <a href="#" class="nav-link">Contact</a>
+    </nav>
+    <!--- Mobile Responsive -->
+    <nav id="mobile-nav-bar" class="mobile-responsive">
+      <a href="#" class="nav-logo"><img src="assets/logo_pear.png" alt="Logo"></a>
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="#" class="mobile-nav-link">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="mobile-nav-link">Traders</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="mobile-nav-link">Recipes</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="mobile-nav-link">Contact</a>
+        </li>
+      </ul>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+    <!-- End Mobile Responsive -->
+  </div>
+  <main id="recipes">
+    <div class="card-recipe">
+      <div class="card__body">
+        <img src="https://images.unsplash.com/photo-1536304929831-ee1ca9d44906?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="" class="card-image">
+        <h2 class="card-title">The Everyday Salad</h2>
+        <p class="card-description">Take your boring salads up a knotch. This recipe is perfect for lunch and only contains 5 ingredients!</p>
+      </div>
+      <button class="card-btn">View Recipe</button>
+    </div>
+  
+    <div class="card-recipe">
+      <div class="card__body">
+        <img src="https://images.unsplash.com/photo-1476124369491-e7addf5db371?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="" class="card__image">
+        <h2 class="card-title">Simple Risotto</h2>
+        <p class="card-description">Fear Risotto no more! This simple recipe is perfect for family dinners.</p>
+      </div>
+      <button class="card-btn">View Recipe</button>
+    </div>
+  
+    <div class="card-recipe">
+      <div class="card-body">
+        <img src="https://images.unsplash.com/photo-1529928520614-7c76e2d99740?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="" class="card__image">
+        <h2 class="card-title">Baked Cod with Vegetables</h2>
+        <p class="card-description">Baked Cod with Vegetables. 30 minute meal!</p>
+      </div>
+      <button class="card-btn">View Recipe</button>
+    </div>
+  </main>
+  <footer>
+    <p>© 2022 - Landing Page Project</p>
+  </footer>
+  <script src="javascript.js"></script>
+</body>
+</html>
