@@ -24,3 +24,9 @@
 
   ![Chess Flex](chessboard-flex/asset/chess-flex.png)
   ![Chess Flex](chessboard-grid/asset/chess-grid.png)  
+
+4. [**Landing Page**](https://github.com/grailwilly/batch18-fe-activities/tree/main/landing-page)
+    - Final Project for HTML and CSS
+    - To Do: Make it more responsiveness
+
+![Landing Page](landing-page/assets/landing-page.png)
