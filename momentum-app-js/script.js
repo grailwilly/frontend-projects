@@ -1,17 +1,18 @@
-const inputName = document.getElementById("first-name");
-const submitName = document.getElementById("submit-name");
-const formName = document.getElementById("input-name");
+const displayGreeting = document.getElementById("user");
 
-submitName.addEventListener("click", (event) => {
-  
-  event.preventDefault()
+function greeting() {
+  let urlString = window.location.search;
+  console.log(urlString);
 
-  if(inputName.value !== "") {
-    console.log("Entered Name")
-    formName.submit();
-    inputName.value = "";
+  let url = new URLSearchParams(urlString);
+  console.log(url);
 
-  } else {
-    alert("Please enter your name!");
-  }
-});
+  let getFirstName = url.get('firstName');
+  console.log(getFirstName);
+
+  let greet = "Hi " + getFirstName;
+
+  return greet;
+}
+
+displayGreeting.innerHTML = greeting();
