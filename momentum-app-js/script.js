@@ -22,8 +22,6 @@ function greeting() {
   greetElement.innerText = greet + "!";
   userElement.innerText = getFirstName;
 
-  // return greet + " " + getFirstName;
-
   displayGreeting.append(greetElement, userElement)
 
 }
