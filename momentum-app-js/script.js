@@ -9,14 +9,9 @@ const greetingType = ["Good Morning", "Good Afternoon", "Good Evening", "Get Som
 
 function greeting() {
   let urlString = window.location.search;
-  console.log(urlString);
-
   let url = new URLSearchParams(urlString);
-  console.log(url);
-
   let getFirstName = url.get('firstName');
-  console.log(getFirstName);
-
+  
   let greet = "";
 
   if (hours < 12) greet = greetingType[0];
@@ -33,11 +28,14 @@ function greeting() {
 
 }
 
-greeting();
-
 function time() {
   displayClock.innerText = `${ hours < 10 ? `0${hours}` : hours}:${ minutes < 10 ? `0${minutes}` : minutes}`;
 }
 
-time();
-setInterval(time, 10000);
+function timeInit() {
+  time();
+  setInterval(time, 10000);
+}
+
+greeting();
+timeInit();
