@@ -28,12 +28,8 @@ function greeting() {
 
 function time() {
   displayClock.innerText = `${ hours < 10 ? `0${hours}` : hours}:${ minutes < 10 ? `0${minutes}` : minutes}`;
-}
-
-function timeInit() {
-  time();
-  setInterval(time, 10000);
+  setTimeout(time, 500)
 }
 
 greeting();
-timeInit();
+time();
