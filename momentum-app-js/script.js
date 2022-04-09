@@ -10,8 +10,8 @@ submitName.addEventListener("click", (event) => {
     console.log("Entered Name")
     formName.submit();
     inputName.value = "";
+
   } else {
     alert("Please enter your name!");
   }
-
 });
