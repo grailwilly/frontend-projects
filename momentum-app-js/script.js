@@ -2,7 +2,7 @@ const inputName = document.getElementById("first-name");
 const submitName = document.getElementById("submit-name");
 const formName = document.getElementById("input-name");
 
-submitName.addEventListener("click", function loginName(event) {
+submitName.addEventListener("click", (event) => {
   
   event.preventDefault()
 
@@ -11,7 +11,7 @@ submitName.addEventListener("click", function loginName(event) {
     formName.submit();
     inputName.value = "";
   } else {
-    alert("Please enter your name")
+    alert("Please enter your name!");
   }
 
 });
