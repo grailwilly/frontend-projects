@@ -6,6 +6,10 @@ const date = new Date();
 const hours = date.getHours();
 const minutes = date.getMinutes();
 const greetingType = ["Good Morning", "Good Afternoon", "Good Evening", "Get Some Sleep"]
+const focusLabel = document.getElementById("focus-label");
+const inputFocus = document.getElementById("input-focus");
+const addFocus = document.getElementById("add-focus");
+const clearFocus = document.getElementById("clear-focus");
 
 function greeting() {
   let urlString = window.location.search;
@@ -28,8 +32,30 @@ function greeting() {
 
 function time() {
   displayClock.innerText = `${ hours < 10 ? `0${hours}` : hours}:${ minutes < 10 ? `0${minutes}` : minutes}`;
-  setTimeout(time, 60000);
+  setInterval(time, 60000);
+}
+
+function saveFocus() {
+    addFocus.addEventListener("click", () => {
+    localStorage.setItem('focus', `${inputFocus.value}`);
+  });
+}
+
+function displayFocus() {
+  if(inputFocus.value !== null) {
+    let focus = localStorage.getItem("focus");
+    inputFocus.value = focus;
+  }
+}
+
+function resetFocus() {
+  clearFocus.addEventListener("click", () => {
+    localStorage.clear();
+  })
 }
 
 greeting();
 time();
+saveFocus();
+displayFocus();
+resetFocus();

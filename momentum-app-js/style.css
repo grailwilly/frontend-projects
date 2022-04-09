@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Space+Mono&display=swap');
 
 body {
-  margin: 0;
+  margin: 0 20px 0 20px;
   padding: 0px;
   font-family: 'Space Mono', monospace;
   background-color: #F6AE00;
@@ -14,8 +14,6 @@ nav {
   justify-content: space-between;
   align-items: center;
   height: 20vh;
-  margin-left: 20px;
-  margin-right: 20px;
   font-weight: 900;
 }
 
@@ -29,4 +27,32 @@ nav {
 #time {
   font-size: 100px;
   color: #F6AE00;
+}
+
+#container {
+  display: flex;
+  justify-content: space-between;
+  height: 60vh;
+}
+
+#input-focus {
+  width: 100%;
+  font-size: 40px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #F6AE00;
+  caret-color: #fff;
+  text-align: center;
+  outline: none;
+  color: #fff;
+}
+
+#add-focus , #clear-focus {
+  margin-top: 20px;
+  font-size: 25px;
+  border: 1px solid #F6AE00;
+  border-radius: 2px;
+  background-color: #F6AE00;
+  color: #fff;
+  font-weight: 700;
 }
