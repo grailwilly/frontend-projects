@@ -56,7 +56,7 @@ nav {
   color: #fff;
 }
 
-#add-focus , #clear-focus, .roll-quotes, .add-quotes {
+#add-focus , #clear-focus, .roll-quotes, .add-quotes, .add-todo {
   margin-top: 20px;
   font-size: 25px;
   border: 1px solid #F6AE00;
@@ -144,4 +144,76 @@ nav {
 
 #submit-quote:hover, #cancel-quote:hover {
   text-decoration: underline;
+}
+
+#todoContainer {
+  width: 30%;
+}
+
+#todoContainer h1 {
+  text-align: center;
+}
+
+.todo-input {
+  width: 100%;
+  font-size: 25px;
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid #F6AE00;
+  caret-color: #fff;
+  text-align: center;
+  outline: none;
+  color: #fff;
+}
+
+.todo-input::placeholder {
+  font-size: 20px;
+  color: #fff;
+  font-style: italic;
+}
+
+.add-todo {
+  float: right;
+}
+
+.todo-items {
+  margin-top: 15%;
+  padding: 5%;
+}
+
+.item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #F6AE00;
+  padding: 5px;
+  color: #fff;
+  border: none;
+  border-bottom: 2px solid #000;
+}
+
+.item:first-child {
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+}
+
+.item:last-child {
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+
+.checkbox {
+  height: 20px;
+}
+
+.checked {
+  text-decoration: line-through;
+}
+
+.delete-todo {
+  background-color: #fff;
+}
+
+.delete-todo:hover {
+  border: 2px solid red;
 }

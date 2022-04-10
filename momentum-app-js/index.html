@@ -25,8 +25,19 @@
           <input type="submit" id="clear-focus" value="Clear">
         </form>
       </div>
-      <div id="todo">
-        <h1>Todo</h1>
+      <div id="todoContainer">
+        <h1>To Do</h1>
+        <form class="todo-form">
+          <input type="text" class="todo-input" placeholder="Add a Todo...">
+          <button type="submit" class="add-todo">Add</button>
+        </form>
+        <ul class="todo-items">
+          <li class="item" data-key="001">
+            <input type="checkbox" class="checkbox">
+            Code.Code.Code 
+            <button class="delete-todo">&#x2715</button>
+          </li>
+        </ul>
       </div>
     </div>
     <div id="random-quotes">
@@ -54,5 +65,6 @@
     </div>
   </div>
   <script src="script.js"></script>
+  <script src="todo.js"></script>
 </body>
 </html>
