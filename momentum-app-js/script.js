@@ -41,7 +41,7 @@ function greeting() {
 
 function timeAndDate() {
   displayClock.innerText = `${ hours < 10 ? `0${hours}` : hours}:${ minutes < 10 ? `0${minutes}` : minutes}`;
-  setInterval(time, 60000);
+  setInterval(timeAndDate, 60000);
 
   const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
   const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
