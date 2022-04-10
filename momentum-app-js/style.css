@@ -26,6 +26,16 @@ nav {
 #time {
   font-size: 100px;
   color: #F6AE00;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#date {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #F6AE00;
+  border: none;
+  border-bottom: 2px solid #fff;
 }
 
 #container {

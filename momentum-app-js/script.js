@@ -2,6 +2,7 @@ const displayGreeting = document.getElementById("user");
 const greetElement = document.createElement("h1");
 const userElement = document.createElement("h1");
 const displayClock = document.getElementById("time");
+const displayDate = document.getElementById("date");
 const date = new Date();
 const hours = date.getHours();
 const minutes = date.getMinutes();
@@ -38,9 +39,14 @@ function greeting() {
 
 }
 
-function time() {
+function timeAndDate() {
   displayClock.innerText = `${ hours < 10 ? `0${hours}` : hours}:${ minutes < 10 ? `0${minutes}` : minutes}`;
   setInterval(time, 60000);
+
+  const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+  const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+  displayDate.innerText = days[date.getDay()] + " - " + months[date.getMonth()] + " " + date.getUTCDate() + ", " + date.getFullYear();
 }
 
 function saveFocus() {
@@ -152,7 +158,7 @@ function displayQuote() {
 
 greeting();
 
-time();
+timeAndDate();
 
 saveFocus();
 displayFocus();
