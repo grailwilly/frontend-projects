@@ -5,7 +5,7 @@ const formName = document.getElementById("input-name");
 submitName.addEventListener("click", (event) => {
   
   event.preventDefault()
-
+  
   if(inputName.value !== "") {
     console.log("Entered Name")
     localStorage.setItem("first-name", `${inputName.value}`);
