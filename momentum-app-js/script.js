@@ -16,6 +16,8 @@ const addQuote = document.querySelector(".add-quotes");
 const modalForm = document.getElementById("modal-quote-input");
 const newQuote = document.querySelector(".new-quote");
 const newAuthor = document.querySelector(".new-author");
+const submitQuote = document.getElementById("submit-quote");
+const cancelQuote = document.getElementById("cancel-quote");
 
 function greeting() {
   let urlString = window.location.search;
@@ -63,47 +65,47 @@ function resetFocus() {
 const quoteArray = [
   {
     quote: "&#8220; It is fine to celebrate success but it is more important to heed the lessons of failure. &#8221;",
-    author: "- Bill Gates, Co-founder of Microsoft"
+    author: "&#x5BE Bill Gates, Co-founder of Microsoft"
   },
   {
     quote: "&#8220; You cannot have everything you want, but you can have the things that really matter to you. &#8221;",
-    author: "- Marissa Mayer, President and CEO of Yahoo!"
+    author: "&#x5BE Marissa Mayer, President and CEO of Yahoo!"
   },
   {
     quote: "&#8220; The biggest risk is not taking any risk… In a world that is changing really quickly, the only strategy that is guaranteed to fail, is not taking risks. &#8221;",
-    author: "- Mark Zuckerberg, Co-founder of Facebook"
+    author: "&#x5BE Mark Zuckerberg, Co-founder of Facebook"
   },
   {
     quote: "&#8220; If you're offered a seat on a rocket ship, don't ask what seat. &#8221;",
-    author: "- Sheryl Sandberg, CEO of Lean In."
+    author: "&#x5BE Sheryl Sandberg, CEO of Lean In."
   },
   {
     quote: "&#8220; If you don't innovate fast, disrupt your industry, disrupt yourself, you'll be left behind. &#8221;",
-    author: "- John Chambers, CEO of Cisco"
+    author: "&#x5BE John Chambers, CEO of Cisco"
   },
   {
     quote: "&#8220; Customers should be number one, Employees number two, and then only your Shareholders come at number three. &#8221;",
-    author: "- Jack Ma,  Founder, Alibaba"
+    author: "&#x5BE Jack Ma,  Founder, Alibaba"
   },
   {
     quote: "&#8220; If you're competitor-focused, you have to wait until there is a competitor doing something. Being customer-focused allows you to be more pioneering. &#8221;",
-    author: "- Jeff Bezos, Founder of Amazon"
+    author: "&#x5BE Jeff Bezos, Founder of Amazon"
   },
   {
     quote: "&#8220; Taking care of your employees is extremely important and very, very visible. &#8221;",
-    author: "- Larry Ellison, Founder of Oracle"
+    author: "&#x5BE Larry Ellison, Founder of Oracle"
   },
   {
     quote: "&#8220; The best way to predict the future is to invent it. &#8221;",
-    author: "- Alan Kay, computer scientist"
+    author: "&#x5BE Alan Kay, computer scientist"
   },
   {
     quote: "&#8220; Growth and comfort do not coexist. &#8221;",
-    author: "- Ginni Rometty, CEO of IBM"
+    author: "&#x5BE Ginni Rometty, CEO of IBM"
   },
   {
     quote: "&#8220; Keep going forward because success will come &#8221;",
-    author: "- Cassandra Sanford, CEO Kelly Mitchell Group"
+    author: "&#x5BE Cassandra Sanford, CEO Kelly Mitchell Group"
   }
 ]
 
@@ -123,10 +125,40 @@ function modalQuote() {
 
 }
 
+function saveQoute() {
+  submitQuote.addEventListener("click", () => {
+    localStorage.setItem('new-quote', `${newQuote.value}`);
+    localStorage.setItem('new-author', `${newAuthor.value}`);
+  });
+}
+
+function displayQuote() {
+  if(newQuote.value !== null && newAuthor.value !== null) {
+    let quoteValue = localStorage.getItem("new-quote");
+    let authorValue = localStorage.getItem("new-author");
+    
+    quoteText.innerHTML = "&#8220; " + quoteValue + " &#8221;";
+    authorName.innerHTML = "&#x5BE " + authorValue;
+
+    let obj = {};
+
+    obj["quote"] = quoteText.innerHTML;
+    obj["author"] = authorName.innerHTML;
+
+    quoteArray.push(obj);
+    console.log(quoteArray);
+  }
+}
+
 greeting();
+
 time();
+
 saveFocus();
 displayFocus();
 resetFocus();
+
 randomQuotes();
 modalQuote();
+saveQoute();
+displayQuote();
