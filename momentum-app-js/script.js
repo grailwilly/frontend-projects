@@ -12,6 +12,10 @@ const addFocus = document.getElementById("add-focus");
 const clearFocus = document.getElementById("clear-focus");
 const quoteText = document.getElementById("quote-text");
 const authorName = document.getElementById("author");
+const addQuote = document.querySelector(".add-quotes");
+const modalForm = document.getElementById("modal-quote-input");
+const newQuote = document.querySelector(".new-quote");
+const newAuthor = document.querySelector(".new-author");
 
 function greeting() {
   let urlString = window.location.search;
@@ -110,9 +114,19 @@ function randomQuotes() {
   authorName.innerHTML = quoteArray[randomIndex].author;
 }
 
+function modalQuote() {
+
+  addQuote.addEventListener("click", () => {
+    modalForm.style.display = "block";
+    console.log("'clicked add quote");
+  });
+
+}
+
 greeting();
 time();
 saveFocus();
 displayFocus();
 resetFocus();
 randomQuotes();
+modalQuote();

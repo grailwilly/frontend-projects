@@ -70,3 +70,68 @@ nav {
   color: #F6AE00;
   font-weight: 700;
 }
+
+#modal-quote-input {
+  display: none;
+  position: absolute;
+  top: 20%;
+  left: 25%;
+  background-color: #F6AE00;
+  width: 50%;
+  height: 45vh;
+}
+
+#form-new-quote {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.quote-field, .author-field,.quote-button {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.quote-field, .author-field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.quote-field {
+  margin-top: 20px
+}
+
+.quote-label {
+  font-size: 20px;
+}
+
+.new-quote {
+  width: 90%;
+  font-size: 25px;
+  text-align: center;
+  outline-color: #F6AE00;
+  border: none;
+}
+
+.new-author {
+  width: 50%;
+  font-size: 25px;
+  text-align: center;
+  outline-color: #F6AE00;
+  border: none;
+}
+
+#submit-quote, #cancel-quote {
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 25px;
+  background: transparent;
+  border: none;
+  color: #fff;
+}
+
+#submit-quote:hover, #cancel-quote:hover {
+  text-decoration: underline;
+}
