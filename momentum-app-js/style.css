@@ -13,7 +13,6 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 20vh;
   font-weight: 900;
 }
 
@@ -32,7 +31,7 @@ nav {
 #container {
   display: flex;
   justify-content: space-between;
-  height: 60vh;
+  height: 50vh;
 }
 
 #input-focus {
@@ -47,12 +46,27 @@ nav {
   color: #fff;
 }
 
-#add-focus , #clear-focus {
+#add-focus , #clear-focus, .roll-quotes, .add-quotes {
   margin-top: 20px;
   font-size: 25px;
   border: 1px solid #F6AE00;
   border-radius: 2px;
   background-color: #F6AE00;
   color: #fff;
+  font-weight: 700;
+}
+
+#random-quotes {
+  text-align: center;
+}
+
+#quote-text {
+  font-size: 30px;
+  font-weight: 900;
+}
+
+#author {
+  font-size: 20px;
+  color: #F6AE00;
   font-weight: 700;
 }
