@@ -8,9 +8,8 @@ submitName.addEventListener("click", (event) => {
 
   if(inputName.value !== "") {
     console.log("Entered Name")
+    localStorage.setItem("first-name", `${inputName.value}`);
     formName.submit();
-    inputName.value = "";
-
   } else {
     alert("Please enter your name!");
   }

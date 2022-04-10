@@ -21,9 +21,13 @@ const submitQuote = document.getElementById("submit-quote");
 const cancelQuote = document.getElementById("cancel-quote");
 
 function greeting() {
-  let urlString = window.location.search;
-  let url = new URLSearchParams(urlString);
-  let getFirstName = url.get('firstName');
+  // let urlString = window.location.search;
+  // let url = new URLSearchParams(urlString);
+  // let getFirstName = url.get('firstName');
+
+  
+  let storeName = localStorage.getItem("first-name");
+  // console.log(urlString);
   
   let greet = "";
 
@@ -33,7 +37,7 @@ function greeting() {
   else greet = greetingType[2];
 
   greetElement.innerText = greet + "!";
-  userElement.innerText = getFirstName;
+  userElement.innerText = storeName;
 
   displayGreeting.append(greetElement, userElement)
 
