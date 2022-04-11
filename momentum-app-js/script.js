@@ -68,7 +68,7 @@ function displayFocus() {
 
 function resetFocus() {
   clearFocus.addEventListener("click", () => {
-    localStorage.clear();
+    localStorage.removeItem('focus');
   })
 }
 
