@@ -30,3 +30,10 @@
     - To Do: Make it more responsiveness
 
 ![Landing Page](landing-page/assets/landing-page.png)
+
+## JavaScript Project
+[**Momentum App**](https://github.com/grailwilly/batch18-fe-activities/tree/main/momentum-app-js)
+- HTML, CSS, and JavaScript
+- a productivity extension
+
+![Momentum App](momentum-app-js/assets/momentum-app-js.png)
