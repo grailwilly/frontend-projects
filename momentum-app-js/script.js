@@ -44,9 +44,9 @@ function greeting() {
 }
 
 function timeAndDate() {
-  displayClock.innerText = `${ hours < 10 ? `0${hours}` : hours}:${ minutes < 10 ? `0${minutes}` : minutes}`;
-  setInterval(timeAndDate, 60000);
-
+  const suffix = hours >= 12 ? "PM":"AM";
+  displayClock.innerText = `${ hours < 10 ? `0${hours}` : hours}:${ minutes < 10 ? `0${minutes}` : minutes}` + " " + suffix;
+  
   const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
   const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
@@ -163,6 +163,7 @@ function displayQuote() {
 greeting();
 
 timeAndDate();
+setInterval(timeAndDate, 10000);
 
 saveFocus();
 displayFocus();
