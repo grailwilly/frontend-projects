@@ -139,7 +139,6 @@ function modalQuote() {
 
 function saveQoute() {
   submitQuote.addEventListener("click", (e) => {
-    e.preventDefault();
     if(newQuote.value !== "" && newAuthor.value !== "") {
       localStorage.setItem('new-quote', `${newQuote.value}`);
       localStorage.setItem('new-author', `${newAuthor.value}`);
