@@ -66,4 +66,29 @@ body {
   text-decoration: underline;
 }
 
+/* error message */
+
+.alert {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 20px;
+  border: 2px solid red;
+  color: red;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: #fff;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.closebtn:hover {
+  color: red;
+}
+
 
