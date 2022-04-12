@@ -6,7 +6,7 @@ const errorMessage = document.createElement("div");
 
 submitName.addEventListener("click", (event) => {
   
-  event.preventDefault()
+  event.preventDefault();
   
   if(inputName.value !== "") {
     console.log("Entered Name")

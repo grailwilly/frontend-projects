@@ -1,3 +1,4 @@
+const body = document.querySelector("body");
 const displayGreeting = document.getElementById("user");
 const greetElement = document.createElement("h1");
 const userElement = document.createElement("h1");
@@ -19,6 +20,7 @@ const newQuote = document.querySelector(".new-quote");
 const newAuthor = document.querySelector(".new-author");
 const submitQuote = document.getElementById("submit-quote");
 const cancelQuote = document.getElementById("cancel-quote");
+const errorMessage = document.createElement("div");
 
 function greeting() {
   // let urlString = window.location.search;
@@ -136,9 +138,27 @@ function modalQuote() {
 }
 
 function saveQoute() {
-  submitQuote.addEventListener("click", () => {
-    localStorage.setItem('new-quote', `${newQuote.value}`);
-    localStorage.setItem('new-author', `${newAuthor.value}`);
+  submitQuote.addEventListener("click", (e) => {
+    e.preventDefault();
+    if(newQuote.value !== "" && newAuthor.value !== "") {
+      localStorage.setItem('new-quote', `${newQuote.value}`);
+      localStorage.setItem('new-author', `${newAuthor.value}`);
+    } else {
+      const span = document.createElement("span");
+      const p = document.createElement("strong");
+      span.className = "closebtn";
+      errorMessage.className = "alert";
+      span.innerHTML = "&times;";
+      p.innerHTML = "Please Fill Quote and Author!"
+
+      errorMessage.append(span , p);
+
+      body.append(errorMessage);
+
+      span.addEventListener("click", () => {
+      errorMessage.style.display = "none";
+    });
+    }
   });
 }
 
@@ -150,13 +170,13 @@ function displayQuote() {
     quoteText.innerHTML = "&#8220; " + quoteValue + " &#8221;";
     authorName.innerHTML = "&#x5BE " + authorValue;
 
-    let obj = {};
-
-    obj["quote"] = quoteText.innerHTML;
-    obj["author"] = authorName.innerHTML;
+    let obj = {
+      quote: quoteText.innerHTML,
+      author: authorName.innerHTML
+    };
 
     quoteArray.push(obj);
-    console.log(quoteArray);
+    console.log(quoteArray);    
   }
 }
 
