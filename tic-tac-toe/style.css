@@ -26,6 +26,7 @@ body {
 #mainPage {
   height: 220px;
   width: 400px;
+  /* display: none; */
 }
 
 #mainPage h2, #winner h2 {
