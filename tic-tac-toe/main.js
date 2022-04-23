@@ -43,6 +43,7 @@ cell.forEach(box => {
       changeTurn = false
     }
     winner();
+    drawMatch();
   })
 })
 
@@ -73,5 +74,15 @@ function winner() {
     } else {
       continue;
     }
+  }
+}
+
+function drawMatch() {
+  if(cell[0].id !== "" && cell[1].id !== "" && cell[2].id !== "" &&
+  cell[3].id !== "" && cell[4].id !== "" && cell[5].id !== "" &&
+  cell[6].id !== "" && cell[7].id !== "" && cell[8].id !== "" ) {
+    winnerName.innerText = `Match Draw!`;
+    gamePage.style.display = "none";
+    winnerModal.style.display = "block";
   }
 }
