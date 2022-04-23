@@ -4,6 +4,11 @@
 const mainPage = document.querySelector('#mainPage');
 const choosePlayer = document.querySelectorAll('.choose');
 
+const gamePage = document.querySelector("#gamePage");
+const showChange = document.querySelector("#showChange");
+const cell = document.querySelectorAll(".cell");
+
+
 let changeTurn = null;
 
 choosePlayer.forEach(player => {
@@ -11,9 +16,13 @@ choosePlayer.forEach(player => {
     if(player.id === "playerX") {
       changeTurn = false;
       // console.log(changeTurn);
+      showChange.style.left = `0px`;
     }else{
       changeTurn = true;
       // console.log(changeTurn);
+      showChange.style.left = `160px`;
     }
+    mainPage.style.display = "none";
+    gamePage.style.display = "block"
   })
-})
+});
