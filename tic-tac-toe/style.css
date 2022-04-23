@@ -140,3 +140,23 @@ hr {
   transition: 0.2s;
 }
 
+#board {
+  height: 400px;
+  width: 330px;
+  position: absolute;
+  top: 150px;
+  left: 10px;
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-gap: 15px;
+}
+
+.cell {
+  height: 100px;
+  width: 100px;
+  box-shadow: 2px 2px 2px rgb(255 255 255 / 26%), -2px -2px 5px rgb(0 0 0 / 87%);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
