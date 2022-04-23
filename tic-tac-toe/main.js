@@ -4,6 +4,7 @@ const choosePlayer = document.querySelectorAll('.choose');
 const gamePage = document.querySelector("#gamePage");
 const showChange = document.querySelector("#showChange");
 const cell = document.querySelectorAll(".cell");
+const restart = document.getElementById("restart");
 
 const winnerModal = document.getElementById("winner");
 const winnerName = document.getElementById("playerName");
@@ -86,3 +87,7 @@ function drawMatch() {
     winnerModal.style.display = "block";
   }
 }
+
+restart.addEventListener("click", () => {
+  window.location.reload();
+})

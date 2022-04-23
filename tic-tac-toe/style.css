@@ -52,7 +52,7 @@ hr {
   justify-content: space-between;
 }
 
-#button button {
+#button button, .reset {
   height: 55px;
   width: 180px;
   cursor: pointer;
@@ -149,6 +149,12 @@ hr {
   display: grid;
   grid-template-columns: 100px 100px 100px;
   grid-gap: 15px;
+}
+
+#restart {
+  position: absolute;
+  top: 110%;
+  left: 25%;
 }
 
 .cell {
