@@ -26,7 +26,6 @@ body {
 #mainPage {
   height: 220px;
   width: 400px;
-  display: none;
 }
 
 #mainPage h2, #winner h2 {
@@ -93,7 +92,7 @@ hr {
   width: 350px;
   padding: 20px;
   position: relative;
-  /* display: none; */
+  display: none;
 }
 
 #gamePage #turnBtns {
