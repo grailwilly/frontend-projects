@@ -10,7 +10,7 @@ const winnerModal = document.getElementById("winner");
 const winnerName = document.getElementById("playerName");
 const prevBtn = document.getElementById("prev");
 const nextBtn = document.getElementById("next");
-
+const restartGame = document.getElementById("restart-game");
 
 let changeTurn = null;
 
@@ -68,10 +68,14 @@ function winner() {
       winnerName.innerText = `Player X Won The Game!`;
       gamePage.style.display = "none";
       winnerModal.style.display = "block";
+      restart.style.top = "65%";
+      restart.style.left = "43%";
     }else if(cell[combo[0]].id === "O" && cell[combo[1]].id === "O" && cell[combo[2]].id === "O") {
       winnerName.innerText = `Player O Won The Game!`;
       gamePage.style.display = "none";
       winnerModal.style.display = "block";
+      restart.style.top = "65%";
+      restart.style.left = "43%";
     } else {
       continue;
     }
@@ -85,9 +89,15 @@ function drawMatch() {
     winnerName.innerText = `Match Draw!`;
     gamePage.style.display = "none";
     winnerModal.style.display = "block";
+    restart.style.top = "65%";
+    restart.style.left = "43%";
   }
 }
 
 restart.addEventListener("click", () => {
+  window.location.reload();
+})
+
+restartGame.addEventListener("click", () => {
   window.location.reload();
 })

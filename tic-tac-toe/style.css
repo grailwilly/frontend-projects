@@ -54,7 +54,7 @@ hr {
   justify-content: space-between;
 }
 
-#button button, .reset {
+#button button, .reset , .reset-game{
   height: 55px;
   width: 180px;
   cursor: pointer;
@@ -157,6 +157,12 @@ hr {
   position: absolute;
   top: 110%;
   left: 25%;
+}
+
+#restart-game {
+  position: absolute;
+  top: 62%;
+  left: 43%;
 }
 
 .cell {
