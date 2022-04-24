@@ -161,8 +161,8 @@ hr {
 
 #restart-game {
   position: absolute;
-  top: 62%;
-  left: 43%;
+  top: 65%;
+  left: 45%;
 }
 
 .cell {
@@ -174,8 +174,11 @@ hr {
   cursor: pointer;
 }
 
-.cell i {
-  font-size: 60px;
-  color: #fff
+.icon-X , .icon-O {
+  width: 60%;
+}
+
+.player-X, .player-O {
+  width: 20%;
 }
 

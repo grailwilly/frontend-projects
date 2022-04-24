@@ -31,13 +31,13 @@ choosePlayer.forEach(player => {
 cell.forEach(box => {
   box.addEventListener("click", () => {
     if(changeTurn === false) {
-      box.innerHTML = `<i class="fas fa-times"></i>`;
+      box.innerHTML = `<img class="icon-X" src="./assets/mushroom-green.png" />`;
       box.id = "X";
       box.style.pointerEvents = "none";
       showChange.style.left = `160px`;
       changeTurn = true;
     }else{
-      box.innerHTML = `<i class="fas fa-circle-notch"></i>`;
+      box.innerHTML = `<img class="icon-O" src="./assets/mushroom-red.png" />`;
       box.id = "O";
       box.style.pointerEvents = "none";
       showChange.style.left = `0px`;
