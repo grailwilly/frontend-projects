@@ -43,10 +43,17 @@ cell.forEach(box => {
       showChange.style.left = `0px`;
       changeTurn = false
     }
+    saveMove();
     winner();
     drawMatch();
   })
 })
+
+function saveMove() {
+  let move = [];
+  move.push(cell);
+  console.log(move);
+}
 
 let winningCombo = [
   [0, 1, 2],
@@ -65,13 +72,13 @@ function winner() {
     if(cell[combo[0]].id === "" || cell[combo[1]].id === "" || cell[combo[2]].id === "") {
       continue;
     }else if(cell[combo[0]].id === "X" && cell[combo[1]].id === "X" && cell[combo[2]].id === "X") {
-      winnerName.innerText = `Player X Won The Game!`;
+      winnerName.innerHTML = `Player <img class="player-X" src="./assets/mushroom-green.png" /> Won The Game!`;
       gamePage.style.display = "none";
       winnerModal.style.display = "block";
       restart.style.top = "65%";
       restart.style.left = "43%";
     }else if(cell[combo[0]].id === "O" && cell[combo[1]].id === "O" && cell[combo[2]].id === "O") {
-      winnerName.innerText = `Player O Won The Game!`;
+      winnerName.innerHTML = `Player <img class="player-O" src="./assets/mushroom-red.png" /> Won The Game!`;
       gamePage.style.display = "none";
       winnerModal.style.display = "block";
       restart.style.top = "65%";
