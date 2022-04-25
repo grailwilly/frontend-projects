@@ -4,13 +4,12 @@ const choosePlayer = document.querySelectorAll('.choose');
 const gamePage = document.querySelector("#gamePage");
 const showChange = document.querySelector("#showChange");
 const cell = document.querySelectorAll(".cell");
-// const restart = document.getElementById("restart");
 
 const winnerModal = document.getElementById("winner");
 const winnerName = document.getElementById("playerName");
 const prevBtn = document.getElementById("prev");
 const nextBtn = document.getElementById("next");
-const replayGame = document.getElementById("replay");
+const replayGame = document.querySelector(".replay");
 const restartGame = document.querySelectorAll(".reset");
 
 let changeTurn = null;
@@ -76,16 +75,11 @@ function winner() {
     }else if(cell[combo[0]].id === "X" && cell[combo[1]].id === "X" && cell[combo[2]].id === "X") {
       winnerName.innerHTML = `Player <img class="player-X" src="./assets/mushroom-green.png" /> Won The Game!`;
       gamePage.style.display = "none";
-      winnerModal.style.display = "block";
-      restart.style.top = "65%";
-      restart.style.left = "43%";      
+      winnerModal.style.display = "block";      
     }else if(cell[combo[0]].id === "O" && cell[combo[1]].id === "O" && cell[combo[2]].id === "O") {
       winnerName.innerHTML = `Player <img class="player-O" src="./assets/mushroom-red.png" /> Won The Game!`;
       gamePage.style.display = "none";
       winnerModal.style.display = "block";
-      restart.style.top = "65%";
-      restart.style.left = "43%";
-      console.log(move);
     } else {
       continue;
     }
@@ -104,12 +98,13 @@ function drawMatch() {
   }
 }
 
-// restart.addEventListener("click", () => {
-//   window.location.reload();
-// })
-
 restartGame.forEach(reset => {
   reset.addEventListener("click", () => {
     window.location.reload();
   })
+})
+
+replayGame.addEventListener("click", () => {
+  winnerModal.style.display = "none";
+  gamePage.style.display = "block";
 })
