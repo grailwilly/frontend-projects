@@ -32,8 +32,23 @@
 ![Landing Page](landing-page/assets/landing-page.png)
 
 ## JavaScript Project
-[**Momentum App**](https://github.com/grailwilly/batch18-fe-activities/tree/main/momentum-app-js)
+1. [**Momentum App**](https://github.com/grailwilly/batch18-fe-activities/tree/main/momentum-app-js)
 - HTML, CSS, and JavaScript
 - a productivity extension
 
 ![Momentum App](momentum-app-js/assets/momentum-app-js.png)
+
+2. [**Tic Tac Toe**](https://github.com/grailwilly/batch18-fe-activities/tree/main/tic-tac-toe)
+- HTML, CSS, and JavaScript
+- Xs and Os game
+
+-- Main Page - Choosing Player --
+![Tic Tac Toe](tic-tac-toe/assets/mainPage.png)
+-- Start Game --
+![Tic Tac Toe](tic-tac-toe/assets/boardGame.png)
+-- Result Game Winner --
+![Tic Tac Toe](tic-tac-toe/assets/resultWinner.png)
+-- Result Game Draw --
+![Tic Tac Toe](tic-tac-toe/assets/resultDraw.png)
+-- Replay Game --
+![Tic Tac Toe](tic-tac-toe/assets/replayGame.png)
