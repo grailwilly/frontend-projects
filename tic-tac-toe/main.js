@@ -4,13 +4,14 @@ const choosePlayer = document.querySelectorAll('.choose');
 const gamePage = document.querySelector("#gamePage");
 const showChange = document.querySelector("#showChange");
 const cell = document.querySelectorAll(".cell");
-const restart = document.getElementById("restart");
+// const restart = document.getElementById("restart");
 
 const winnerModal = document.getElementById("winner");
 const winnerName = document.getElementById("playerName");
 const prevBtn = document.getElementById("prev");
 const nextBtn = document.getElementById("next");
-const restartGame = document.getElementById("restart-game");
+const replayGame = document.getElementById("replay");
+const restartGame = document.querySelectorAll(".reset");
 
 let changeTurn = null;
 
@@ -49,10 +50,11 @@ cell.forEach(box => {
   })
 })
 
+let moves = [];
+
 function saveMove() {
-  let move = [];
-  move.push(cell);
-  console.log(move);
+  moves.push(cell);
+  console.log(moves);
 }
 
 let winningCombo = [
@@ -76,13 +78,14 @@ function winner() {
       gamePage.style.display = "none";
       winnerModal.style.display = "block";
       restart.style.top = "65%";
-      restart.style.left = "43%";
+      restart.style.left = "43%";      
     }else if(cell[combo[0]].id === "O" && cell[combo[1]].id === "O" && cell[combo[2]].id === "O") {
       winnerName.innerHTML = `Player <img class="player-O" src="./assets/mushroom-red.png" /> Won The Game!`;
       gamePage.style.display = "none";
       winnerModal.style.display = "block";
       restart.style.top = "65%";
       restart.style.left = "43%";
+      console.log(move);
     } else {
       continue;
     }
@@ -101,10 +104,12 @@ function drawMatch() {
   }
 }
 
-restart.addEventListener("click", () => {
-  window.location.reload();
-})
+// restart.addEventListener("click", () => {
+//   window.location.reload();
+// })
 
-restartGame.addEventListener("click", () => {
-  window.location.reload();
+restartGame.forEach(reset => {
+  reset.addEventListener("click", () => {
+    window.location.reload();
+  })
 })
