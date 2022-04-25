@@ -5,12 +5,14 @@ const gamePage = document.querySelector("#gamePage");
 const showChange = document.querySelector("#showChange");
 const cell = document.querySelectorAll(".cell");
 
+const replayHistory = document.getElementById("replay-history");
+const prevBtn = document.querySelector(".prevBtn");
+const nextBtn = document.querySelector(".nextBtn");
+
 const winnerModal = document.getElementById("winner");
 const winnerName = document.getElementById("playerName");
-const prevBtn = document.getElementById("prev");
-const nextBtn = document.getElementById("next");
-const replayGame = document.querySelector(".replay");
-const restartGame = document.querySelectorAll(".reset");
+const replayBtn = document.querySelector(".replay");
+const restartBtn = document.querySelectorAll(".reset");
 
 let changeTurn = null;
 
@@ -29,6 +31,7 @@ choosePlayer.forEach(player => {
 });
 
 cell.forEach(box => {
+  replayHistory.classList.add("hidden");
   box.addEventListener("click", () => {
     if(changeTurn === false) {
       box.innerHTML = `<img class="icon-X" src="./assets/mushroom-green.png" />`;
@@ -93,18 +96,17 @@ function drawMatch() {
     winnerName.innerText = `Match Draw!`;
     gamePage.style.display = "none";
     winnerModal.style.display = "block";
-    restart.style.top = "65%";
-    restart.style.left = "43%";
   }
 }
 
-restartGame.forEach(reset => {
+restartBtn.forEach(reset => {
   reset.addEventListener("click", () => {
     window.location.reload();
   })
 })
 
-replayGame.addEventListener("click", () => {
+replayBtn.addEventListener("click", () => {
+  replayHistory.classList.remove('hidden');
   winnerModal.style.display = "none";
   gamePage.style.display = "block";
 })

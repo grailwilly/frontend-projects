@@ -31,7 +31,7 @@ body {
   /* display: none; */
 }
 
-#mainPage h2, #winner h2 {
+#mainPage h2, #winner h2, .replay-heading { 
   font-size: 50px;
   color: #fff;
   text-align: center;
@@ -55,7 +55,7 @@ hr {
   justify-content: space-between;
 }
 
-#button button, .reset , .reset-game{
+#button button, .reset , .prevBtn, .nextBtn {
   height: 55px;
   width: 180px;
   cursor: pointer;
@@ -181,5 +181,22 @@ hr {
 
 .player-X, .player-O {
   width: 20%;
+}
+
+.hidden {
+  display: none;
+}
+
+.prevBtn, .nextBtn {
+  position: absolute;
+  top: 300px;
+}
+
+.prevBtn {
+  left: -300px;
+}
+
+.nextBtn {
+  right: -300px;
 }
 
