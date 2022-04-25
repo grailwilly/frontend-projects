@@ -110,3 +110,11 @@ replayBtn.addEventListener("click", () => {
   winnerModal.style.display = "none";
   gamePage.style.display = "block";
 })
+
+prevBtn.addEventListener("click", () => {
+  console.log(moves);
+})
+
+nextBtn.addEventListener("click", () => {
+  console.log(moves);
+})
