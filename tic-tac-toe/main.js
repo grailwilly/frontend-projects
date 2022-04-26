@@ -3,7 +3,7 @@ const choosePlayer = document.querySelectorAll('.choose');
 
 const gamePage = document.querySelector("#gamePage");
 const showChange = document.querySelector("#showChange");
-const cell = document.querySelectorAll(".cell");
+const cells = document.querySelectorAll(".cell");
 
 const replayHistory = document.getElementById("replay-history");
 const prevBtn = document.querySelector(".prevBtn");
@@ -30,7 +30,7 @@ choosePlayer.forEach(player => {
   })
 });
 
-cell.forEach(box => {
+cells.forEach(box => {
   replayHistory.classList.add("hidden");
   box.addEventListener("click", () => {
     if(changeTurn === false) {
@@ -55,6 +55,7 @@ cell.forEach(box => {
 let moves = [];
 
 function saveMove() {
+  // get id X and O
   moves.push(cell);
   console.log(moves);
 }
@@ -73,26 +74,26 @@ let winningCombo = [
 function winner() {
   for (let i = 0; i <= 7; i++) {
     let combo = winningCombo[i];
-    if(cell[combo[0]].id === "" || cell[combo[1]].id === "" || cell[combo[2]].id === "") {
+    if(cells[combo[0]].id === "" || cells[combo[1]].id === "" || cells[combo[2]].id === "") {
       continue;
-    }else if(cell[combo[0]].id === "X" && cell[combo[1]].id === "X" && cell[combo[2]].id === "X") {
+    }else if(cells[combo[0]].id === "X" && cells[combo[1]].id === "X" && cells[combo[2]].id === "X") {
       winnerName.innerHTML = `Player <img class="player-X" src="./assets/mushroom-green.png" /> Won The Game!`;
       gamePage.style.display = "none";
       winnerModal.style.display = "block";      
-    }else if(cell[combo[0]].id === "O" && cell[combo[1]].id === "O" && cell[combo[2]].id === "O") {
+    }else if(cells[combo[0]].id === "O" && cells[combo[1]].id === "O" && cells[combo[2]].id === "O") {
       winnerName.innerHTML = `Player <img class="player-O" src="./assets/mushroom-red.png" /> Won The Game!`;
       gamePage.style.display = "none";
       winnerModal.style.display = "block";
-    } else {
+    } else {s
       continue;
     }
   }
 }
 
 function drawMatch() {
-  if(cell[0].id !== "" && cell[1].id !== "" && cell[2].id !== "" &&
-  cell[3].id !== "" && cell[4].id !== "" && cell[5].id !== "" &&
-  cell[6].id !== "" && cell[7].id !== "" && cell[8].id !== "" ) {
+  if(cells[0].id !== "" && cells[1].id !== "" && cells[2].id !== "" &&
+  cells[3].id !== "" && cells[4].id !== "" && cells[5].id !== "" &&
+  cells[6].id !== "" && cells[7].id !== "" && cells[8].id !== "" ) {
     winnerName.innerText = `Match Draw!`;
     gamePage.style.display = "none";
     winnerModal.style.display = "block";
@@ -112,9 +113,12 @@ replayBtn.addEventListener("click", () => {
 })
 
 prevBtn.addEventListener("click", () => {
-  console.log(moves);
+  // for(let i = 0; i < moves.length; i++){
+  //   let move = moves[i];
+  //   console.log(move);
+  // }
 })
 
 nextBtn.addEventListener("click", () => {
-  console.log(moves);
+  // console.log(cell);
 })
