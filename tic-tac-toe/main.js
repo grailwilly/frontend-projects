@@ -46,7 +46,7 @@ cells.forEach(box => {
       showChange.style.left = `0px`;
       changeTurn = false
     }
-    saveMove();
+    // saveMove();
     winner();
     drawMatch();
   })
@@ -56,7 +56,7 @@ let moves = [];
 
 function saveMove() {
   // get id X and O
-  moves.push(cell);
+  // moves.push(cell);
   console.log(moves);
 }
 
