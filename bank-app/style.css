@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+}
+
+/** navbar**/
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-list {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.heading {
+  text-align: center;
+}
+
+/* homepage */
+#homepage {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* login form */
+.login-options {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 40% 20% 40%;
+  justify-items: center;
+  align-items: center;
+}
+
+.login-with-account-and-password, .login-different {
+  display: flex;
+  flex-direction: column;
+}
+
+.forgot-password {
+  text-align: center;
+}
