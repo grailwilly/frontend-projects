@@ -34,8 +34,8 @@
         <!-- <div class="login-options"> -->
           <form action="">
             <div class="login-with-account-and-password">
-              <input type="text" placeholder="Admin / Client ID" />
-              <input type="text" placeholder="Password" />
+              <input type="text" placeholder="Admin / Client ID" id="login-ID" />
+              <input type="text" placeholder="Password" id="password" />
               <input type="button" value="Login to Your Account" />
             </div>
           </form>
@@ -53,23 +53,23 @@
       <div id="sign-up-form">
         <form action="">
           <div class="client-name">
-            <input type="text" name="fname" placeholder="First Name" />
-            <input type="text" name="fname" placeholder="Last Name" />
+            <input type="text" name="fname" placeholder="First Name" id="first-name" />
+            <input type="text" name="fname" placeholder="Last Name" id="last-name" />
           </div>
           <div>
-            <input type="date" name="birth-date" />
-            <select name="gender">
-              <option value="female">Female</option>
-              <option value="male">Male</option>
+            <input type="date" name="birth-date" id="birth-date" />
+            <select name="gender" id="gender">
+              <option value="female" id="female">Female</option>
+              <option value="male" id="male">Male</option>
             </select>
           </div>
           <div>
-            <input type="email" name="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
-            <input type="tel" name="phone" placeholder="Format: 0920-000-0000" pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}" />
+            <input type="email" name="email" id="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
+            <input type="tel" name="phone" id="phone" placeholder="Format: 0920-000-0000" pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}" />
           </div>
           <div>
-            <input type="text" name="username" placeholder="Username">
-            <input type="password" name="password" minlength="8" placeholder="Create Password">
+            <input type="text" name="username" id="username" placeholder="Username">
+            <input type="password" name="password" id="password" minlength="8" placeholder="Create Password">
           </div>
           <div>
             <input type="submit" value="Create New Account" />
