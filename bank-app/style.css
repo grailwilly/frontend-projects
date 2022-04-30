@@ -31,7 +31,7 @@ nav {
 
 /* login form */
 #login-form {
-  /* display: none; */
+  display: none;
 }
 
 .login-options {
@@ -53,5 +53,5 @@ nav {
 
 /* sign up form */
 #sign-up-form {
-  display: none;
+  /* display: none; */
 }
