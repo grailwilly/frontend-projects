@@ -30,6 +30,10 @@ nav {
 }
 
 /* login form */
+#login-form {
+  display: none;
+}
+
 .login-options {
   width: 100%;
   display: grid;

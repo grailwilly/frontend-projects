@@ -30,7 +30,7 @@
         <h1>Login to Your Account</h1>
         <p>The easiest way to send, spend, save, and invest.</p>
       </div>
-      <div id="log-in-form">
+      <div id="login-form">
         <div class="login-options">
           <form action="">
             <div class="login-with-account-and-password">
@@ -50,9 +50,23 @@
         </div>
         <p class="forgot-password">Forgot Password?</p>
       </div>
-      <div id="sign-un-form">
+      <div id="sign-up-form">
         <form action="">
-          
+          <div class="client-name">
+            <input type="text" name="fname" placeholder="First Name" />
+            <input type="text" name="fname" placeholder="Last Name" />
+          </div>
+          <div>
+            <input type="email" name="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
+            <input type="tel" name="phone" placeholder="Format: 0920-000-0000" pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}" />
+          </div>
+          <div>
+            <input type="text" name="username" placeholder="Username">
+            <input type="password" name="password" minlength="8" placeholder="Create Password">
+          </div>
+          <div>
+            <input type="submit" value="Create New Account" />
+          </div>
         </form>
       </div>
     </div>
