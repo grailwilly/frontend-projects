@@ -44,6 +44,7 @@ function addUser(fName, lName, birthDate, gender, email, phone, username, newPas
 
   if(fName !== '' && lName !== '' && birthDate !== '' && gender !== '' && email !== '' && phone !== '' && username !== '' && newPassword !== '') {
     const userProfile = {
+      accountNumber: Date.now(),
       firstName: fName,
       lastName: lName,
       birthDate: birthDate,
