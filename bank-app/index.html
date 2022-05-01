@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bank App</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
   <div id="main">
@@ -30,9 +30,9 @@
         <h1 class="title">Login to Your Account</h1>
         <p class="description">The easiest way to send, spend, save, and invest.</p>
       </div>
-      <div id="login-form">
+      <div id="login">
         <!-- <div class="login-options"> -->
-          <form action="">
+          <form action="" id="login-form">
             <div class="login-with-account-and-password">
               <input type="text" placeholder="Admin / Client ID" id="login-ID" />
               <input type="text" placeholder="Password" id="password" />
@@ -50,8 +50,8 @@
         </div> -->
         <p class="forgot-password">Forgot Password?</p>
       </div>
-      <div id="sign-up-form">
-        <form action="">
+      <div id="signup">
+        <form action="pages/admin-dashboard.html" id="signup-form">
           <div class="client-name">
             <input type="text" name="fname" placeholder="First Name" id="first-name" required />
             <input type="text" name="fname" placeholder="Last Name" id="last-name" required/>
@@ -79,6 +79,6 @@
     </div>
 
   </div>
-  <script src="script.js"></script>
+  <script src="./js/script.js"></script>
 </body>
 </html>

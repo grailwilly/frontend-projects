@@ -6,14 +6,15 @@ const titleText = document.querySelector(".title");
 const descriptionText = document.querySelector(".description");
 
 // login form
-const loginForm = document.getElementById("login-form");
+const loginForm = document.getElementById("login");
 const loginValue = document.getElementById("login-ID");
 const passwordValue = document.getElementById("password");
 const loginAccountBtn = document.getElementById("login-account");
 const forgetPassword = document.querySelector(".forget-password");
 
 // sign up form
-const signUpForm = document.getElementById("sign-up-form");
+const signupContainer = document.getElementById("signup");
+const signUpForm = document.getElementById("signup-form");
 const firstNameInput = document.getElementById("first-name");
 const lastNameInput = document.getElementById("last-name");
 const birthDateInput = document.getElementById("birth-date");
@@ -30,7 +31,7 @@ const userArray = [];
 
 signUpBtn.addEventListener("click", () => {
   loginForm.style.display = "none";
-  signUpForm.style.display = "block";
+  signupContainer.style.display = "block";
   titleText.innerText = "Create Your Account";
   // storeNewAccount();
 })
@@ -58,7 +59,7 @@ function addUser(fName, lName, birthDate, gender, email, phone, username, newPas
     userArray.push(userProfile);
     storeUsersToLocalStorage(userArray);
     console.log(userArray);
-
+  
     firstNameInput.value = "";
     lastNameInput.value = "";
     birthDateInput.value = "";
@@ -69,6 +70,9 @@ function addUser(fName, lName, birthDate, gender, email, phone, username, newPas
     newPasswordInput.value = "";
 
     alert("Created Account");
+    loginForm.style.display = "block";
+    signupContainer.style.display = "none";
+
   } else {
     alert("Please require fields");
   }
