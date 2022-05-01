@@ -72,10 +72,12 @@ function addUser(fName, lName, birthDate, gender, email, phone, username, newPas
   } else {
     alert("Please require fields");
   }
-  
-  
 }
 
 function storeUsersToLocalStorage() {
   localStorage.setItem('users', JSON.stringify(userArray));
+}
+
+function getUsersFromLocalStorage() {
+  const getUser = localStorage.getItem('users');
 }
