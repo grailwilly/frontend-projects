@@ -7,8 +7,8 @@ const descriptionText = document.querySelector(".description");
 
 // login form
 const loginForm = document.getElementById("login");
-const loginValue = document.getElementById("login-ID");
-const passwordValue = document.getElementById("password");
+const loginIdInput = document.getElementById("login-ID");
+const loginPasswordInput = document.getElementById("password");
 const loginAccountBtn = document.getElementById("login-account");
 const forgetPassword = document.querySelector(".forget-password");
 
@@ -46,7 +46,7 @@ function addUser(fName, lName, birthDate, gender, email, phone, username, newPas
 
   if(fName !== '' && lName !== '' && birthDate !== '' && gender !== '' && email !== '' && phone !== '' && username !== '' && newPassword !== '') {
     const userProfile = {
-      accountNumber: Date.now(),
+      accountNumber: Math.floor(Math.random() * 10000000),
       firstName: fName,
       lastName: lName,
       birthDate: birthDate,
@@ -84,8 +84,17 @@ function checkUser(users) {
   // console.log(users);
 
   for(let i = 0; i < users.length; i++) {
-    console.log(users[i]);
+    if(users[i].accountNumber === Number(loginIdInput.value) && users[i].password === loginPasswordInput.value) {
+      console.log(`${users[i].accountNumber} : Correct login`);
+      // window.location = "pages/adminDashboard.html";
+    }
+
+    if(users[i].accountNumber !== Number(loginIdInput.value) && users[i].password !== loginPasswordInput.value) {
+      console.log(`${users[i].accountNumber} : Wrong login`);
+      // window.location = "pages/adminDashboard.html";
+    }
   }
+
 }
 
 function storeUsersToLocalStorage() {
