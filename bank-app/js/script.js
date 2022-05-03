@@ -33,13 +33,14 @@ signUpBtn.addEventListener("click", () => {
   loginForm.style.display = "none";
   signupContainer.style.display = "block";
   titleText.innerText = "Create Your Account";
-  // storeNewAccount();
 })
 
 createAccountBtn.addEventListener("click", (event) => {
   event.preventDefault();
   addUser(firstNameInput.value, lastNameInput.value, birthDateInput.value, genderInput.value, emailInput.value, phoneInput.value, usernameInput.value, newPasswordInput.value);
 });
+
+loginAccountBtn.addEventListener("click", getUsersFromLocalStorage);
 
 function addUser(fName, lName, birthDate, gender, email, phone, username, newPassword) {
 
@@ -79,11 +80,21 @@ function addUser(fName, lName, birthDate, gender, email, phone, username, newPas
   }
 }
 
+function checkUser(users) {
+  // console.log(users);
+
+  for(let i = 0; i < users.length; i++) {
+    console.log(users[i]);
+  }
+}
+
 function storeUsersToLocalStorage() {
   localStorage.setItem('users', JSON.stringify(userArray));
 }
 
 function getUsersFromLocalStorage() {
-  const getUser = localStorage.getItem('users');
+  const getUser = JSON.parse(localStorage.getItem('users'));
+
+  checkUser(getUser);
 }
 
