@@ -87,14 +87,10 @@ function checkUser(users) {
     if(users[i].accountNumber === Number(loginIdInput.value) && users[i].password === loginPasswordInput.value) {
       console.log(`${users[i].accountNumber} : Correct login`);
       // window.location = "pages/adminDashboard.html";
-    }
-
-    if(users[i].accountNumber !== Number(loginIdInput.value) && users[i].password !== loginPasswordInput.value) {
+    } else {
       console.log(`${users[i].accountNumber} : Wrong login`);
-      // window.location = "pages/adminDashboard.html";
     }
   }
-
 }
 
 function storeUsersToLocalStorage() {
