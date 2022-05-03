@@ -72,6 +72,7 @@ function addUser(fName, lName, birthDate, gender, email, phone, username, newPas
     alert("Created Account");
     loginForm.style.display = "block";
     signupContainer.style.display = "none";
+    titleText.innerText = "Login To Your Account";
 
   } else {
     alert("Please require fields");
@@ -85,3 +86,4 @@ function storeUsersToLocalStorage() {
 function getUsersFromLocalStorage() {
   const getUser = localStorage.getItem('users');
 }
+
