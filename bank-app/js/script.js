@@ -54,7 +54,8 @@ function addUser(fName, lName, birthDate, gender, email, phone, username, newPas
       email: email,
       phone: phone,
       username: username,
-      password: newPassword
+      password: newPassword,
+      balance: 0
     };
   
     userArray.push(userProfile);
@@ -87,13 +88,14 @@ function checkUser(users) {
     if(users[i].accountNumber === Number(loginIdInput.value) && users[i].password === loginPasswordInput.value) {
       console.log(`${users[i].accountNumber} : Correct login`);
       // window.location = "pages/adminDashboard.html";
+      users[i]['status'] = "Active";
+      localStorage.setItem('users', JSON.stringify(users));
       loginIdInput.value = "";
       loginPasswordInput.value = "";
-    } else {
-      console.log(`${users[i].accountNumber} : Wrong login`);
-      alert("Wrong")
+      window.location = "pages/accountDashboard.html";
     }
   }
+
 }
 
 function storeUsersToLocalStorage() {
@@ -102,7 +104,7 @@ function storeUsersToLocalStorage() {
 
 function getUsersFromLocalStorage() {
   const getUser = JSON.parse(localStorage.getItem('users'));
-
+  console.log(getUser);
   checkUser(getUser);
 }
 
