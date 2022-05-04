@@ -1,7 +1,8 @@
 const logOutBtn = document.getElementById("logout-btn");
 const depositInput = document.getElementById("deposit-value");
 const depositBtn = document.querySelector(".deposit-btn");
-const withdrawBtn = document.querySelector(".deposit-btn");
+const withdrawInput = document.getElementById("withdraw-value");
+const withdrawBtn = document.querySelector(".withdraw-btn");
 const sendMoneyBtn = document.querySelector(".deposit-btn");
 
 
@@ -13,10 +14,25 @@ depositBtn.addEventListener("click", (event) => {
   deposit(Number(depositInput.value));
 })
 
+withdrawBtn.addEventListener("click", (event) => {
+  event.preventDefault();
+  withdraw(Number(withdrawInput.value));
+})
+
 function deposit(amount) {
   for(let i = 0; i < users.length; i++) {
     if(users[i].status === "Active") {
       users[i].balance = Number(users[i].balance) + amount;
+      localStorage.setItem('users', JSON.stringify(users));
+      console.log(users)
+    }
+  }
+}
+
+function withdraw(amount) {
+  for(let i = 0; i < users.length; i++) {
+    if(users[i].status === "Active") {
+      users[i].balance = Number(users[i].balance) - amount;
       localStorage.setItem('users', JSON.stringify(users));
       console.log(users)
     }
