@@ -44,7 +44,7 @@ function displayUser() {
     if(users[i].status === "Active") {
       userName.innerText = users[i].firstName;
       accountNumber.innerText = users[i].accountNumber;
-      balance.innerText = userd[i].accountNumber;
+      balance.innerText = users[i].balance;
     }
   }
 }
@@ -54,6 +54,7 @@ function deposit(amount) {
     if(users[i].status === "Active") {
       users[i].balance = Number(users[i].balance) + amount;
       localStorage.setItem('users', JSON.stringify(users));
+      depositInput.value = "";
       console.log(users)
     }
   }
@@ -64,6 +65,7 @@ function withdraw(amount) {
     if(users[i].status === "Active") {
       users[i].balance = Number(users[i].balance) - amount;
       localStorage.setItem('users', JSON.stringify(users));
+      withdrawInput.value = "";
       console.log(users)
     }
   }
@@ -74,6 +76,8 @@ function sendMoney(amount, accountNumber) {
     if(users[i].status === "Active") {
       users[i].balance = Number(users[i].balance) - amount;
       localStorage.setItem('users', JSON.stringify(users));
+      sendAmountInput.value = "";
+      sendAccountNumberInput.value = "";
       console.log(users)
     } 
 
