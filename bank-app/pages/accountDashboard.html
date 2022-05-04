@@ -30,14 +30,14 @@
           <button class="send-money-btn">Send Money</button>
         </th>
         <th>
-          <select name="expense" id="expense-type" >
-            <option value="expense" id="expense-bills">Expense</option>
-            <option value="savings" id="savings">Savings</option>
-            <option value="investment" id="savings">Investment</option>
+          <select name="expense" id="expenses-option" >
+            <option value="expense" id="expense-type">Expense</option>
+            <option value="savings" id="savings-type">Savings</option>
+            <option value="investment" id="investment-type">Investment</option>
           </select>
-          <input type="text" id="expense-description" />
-          <input type="text" id="expense-amount" />
-          <button class="add-expense">Add Expense</button>
+          <input type="text" id="expense-description" placeholder="description" />
+          <input type="text" id="expense-amount" placeholder="amount" />
+          <button id="add-expense">Add Expense</button>
         </th>
       </tr>
       <tr>
@@ -63,5 +63,6 @@
     </table>
   </div>
   <script src="../js/account.js"></script>
+  <script src="../js/budget.js"></script>
 </body>
 </html>
