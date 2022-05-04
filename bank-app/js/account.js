@@ -1,4 +1,8 @@
 const logOutBtn = document.getElementById("logout-btn");
+const userName = document.querySelector(".name");
+const accountNumber = document.getElementById("account-number");
+const balance = document.getElementById("balance")
+
 const depositInput = document.getElementById("deposit-value");
 const depositBtn = document.querySelector(".deposit-btn");
 const withdrawInput = document.getElementById("withdraw-value");
@@ -25,6 +29,16 @@ sendMoneyBtn.addEventListener("click", (event) => {
   event.preventDefault();
   sendMoney(Number(sendAmountInput.value), Number(sendAccountNumberInput.value));
 })
+
+function displayUser() {
+  for(let i = 0; i < users.length; i++) {
+    if(users[i].status === "Active") {
+      userName.innerText = users[i].firstName;
+      accountNumber.innerText = users[i].accountNumber;
+      balance.innerText = userd[i].accountNumber;
+    }
+  }
+}
 
 function deposit(amount) {
   for(let i = 0; i < users.length; i++) {
@@ -62,3 +76,5 @@ function sendMoney(amount, accountNumber) {
       
   }
 }
+
+displayUser();
