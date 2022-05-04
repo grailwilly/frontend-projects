@@ -30,6 +30,15 @@ sendMoneyBtn.addEventListener("click", (event) => {
   sendMoney(Number(sendAmountInput.value), Number(sendAccountNumberInput.value));
 })
 
+logOutBtn.addEventListener("click", () => {
+  for(let i = 0; i < users.length; i++) {
+    delete users[i].status;
+    localStorage.setItem('users', JSON.stringify(users));
+    window.location = "../index.html";
+    console.log(users)
+  }
+})
+
 function displayUser() {
   for(let i = 0; i < users.length; i++) {
     if(users[i].status === "Active") {
