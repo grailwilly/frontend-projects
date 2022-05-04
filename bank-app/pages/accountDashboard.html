@@ -30,7 +30,14 @@
           <button class="send-money-btn">Send Money</button>
         </th>
         <th>
-          <button class="pay-bills-btn">Add Expense</button>
+          <select name="expense" id="expense-type" >
+            <option value="expense" id="expense-bills">Expense</option>
+            <option value="savings" id="savings">Savings</option>
+            <option value="investment" id="savings">Investment</option>
+          </select>
+          <input type="text" id="expense-description" />
+          <input type="text" id="expense-amount" />
+          <button class="add-expense">Add Expense</button>
         </th>
       </tr>
       <tr>
@@ -42,14 +49,16 @@
   <div id="budget-track">
     <table>
       <tr>
-        <th>Expense Name</th>
-        <th>Cost</th>
-        <th>Status</th>
+        <th>Date</th>
+        <th>Type</th>
+        <th>Amount</th>
+        <th>Action</th>
       </tr>
       <tr>
+        <td>May 4, 2022</td>
+        <td>Expense</td>
         <td>Electricity</td>
-        <td>200</td>
-        <td>Pay</td>
+        <td><span class="edit-expense">Edit</span>|<span class="delete-expense">Delete</span></td>
       </tr>
     </table>
   </div>
