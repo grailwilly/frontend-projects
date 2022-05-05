@@ -62,7 +62,7 @@ nav {
   justify-content: center;
   align-items: center;
   /* background-image: url(https://images.unsplash.com/photo-1629475668737-8a2a33dd866e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2077&q=80); */
-  background-image: url(https://images.unsplash.com/photo-1522932753915-9ee97e43e3d9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80);
+  background-image: url(../assets/background.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
 }
