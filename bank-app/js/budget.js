@@ -9,7 +9,8 @@ let month = months[date.getMonth()];
 let day = date.getUTCDate();
 let year = date.getFullYear();
 
-const usersCheck = JSON.parse(localStorage.getItem('users'));
+const newExpense = document.getElementById("expense-row");
+
 const expenseArray = [];
 
 const Expense = function(expenseType, description, amount){
@@ -23,23 +24,30 @@ const Expense = function(expenseType, description, amount){
 addExpenseBtn.addEventListener("click", (event) => {
   event.preventDefault();
   addExpense(expenseTypeInput.value, expenseDescriptionInput.value, Number(expenseAmountInput.value));
-  // updateExpenseToLocalStorage();
-  // console.log(expenseArray);
-
+  displayExpenses();
 })
 
 function addExpense(expenseType, description, amount) {
   let newExpense = new Expense(expenseType, description, amount);
   expenseArray.push(newExpense);
-  // updateExpenseToLocalStorage();
-  console.log(expenseArray);
+  updateExpenseToLocalStorage();
 }
 
-// function updateExpenseToLocalStorage() {
-//   for(let i = 0; i < usersCheck.length; i++) {
-//     if(usersCheck[i].status === "Active") {
-//       usersCheck[i].expense = expenseArray;
-//       localStorage.setItem('users', JSON.stringify(users));
-//     }
-//   }
-// }
+function updateExpenseToLocalStorage() {
+  for(let i = 0; i < users.length; i++) {
+    if(users[i].status === "Active") {
+      users[i].expense = expenseArray;
+      localStorage.setItem('users', JSON.stringify(users));
+    }
+  }
+}
+
+function displayExpenses() {
+  for(let i = 0; i < users.length; i++) {
+    for(let j = 0; j < users[i].expense.length; j++) {
+      console.log(users[i].expense[j]);
+      console.log(expenseArray);
+    }
+  }
+}
+

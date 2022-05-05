@@ -11,7 +11,6 @@ const sendAmountInput = document.getElementById("send-amount");
 const sendAccountNumberInput = document.getElementById("send-account-number");
 const sendMoneyBtn = document.querySelector(".send-money-btn");
 
-
 const users = JSON.parse(localStorage.getItem('users'));
 // console.log(users);
 
