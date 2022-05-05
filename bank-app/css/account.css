@@ -1,3 +1,5 @@
+/* Log out button*/
+
 #logout-btn {
   font-size: 15px;
   padding: 10px;
@@ -11,6 +13,7 @@
   transform: scale(1.1);
 }
 
+/* side nav-bar */
 #grid-css {
   display: grid;
   grid-template-columns: 30% 70%;
@@ -73,6 +76,8 @@
   top: -15px;
 }
 
+/* budget tracker */
+
 .budget {
   margin-bottom: 30px;
 }
@@ -96,4 +101,58 @@
 #budget-input button:hover {
   background-color: #00E99E;
   transform: scale(0.8);
+}
+
+/* modals */
+
+#modals {
+  background-color: #00E99E;
+  position: absolute;
+  width: 25%;
+  height: 35vh;
+  top: 30%;
+  left: 50%;
+  border: 1px solid #00E99E;
+  display: none;
+}
+
+.deposit-heading{
+  text-align: center;
+  padding: 30px;
+}
+
+.deposit-input {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 30px 30px 30px;
+}
+
+.deposit-input input, .deposit-input button {
+  height: 5vh;
+  margin-bottom: 20px;
+}
+
+.deposit-input button {
+  align-self: center;
+  width: 50%;
+  font-size: 25px;
+  border: none;
+}
+
+.deposit-input button:hover {
+  border: 2px solid #00E99E;
+  background-color: #fff;
+  color: #00E99E;
+}
+
+.close-modal {
+  position: relative;
+  top: -290px;
+  left: 430px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+#sendMoney-Moday {
+  display: none;
 }
