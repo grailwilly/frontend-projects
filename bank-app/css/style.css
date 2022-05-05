@@ -1,11 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Varela+Round&display=swap');
+
 * {
   margin: 0;
+  font-family: 'Varela Round', sans-serif;
 }
 
 /** navbar**/
 nav {
   display: flex;
   justify-content: space-between;
+}
+
+#top-nav {
+  height: 10vh;
+  align-items: center;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 .nav-list {
@@ -15,14 +25,34 @@ nav {
   list-style: none;
 }
 
-.heading {
-  text-align: center;
+.nav-items {
+  font-size: 20px;
+  padding: 20px;
+}
+
+.sign-up {
+  background-color: #00E99E;
+  font-size: 15px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.sign-up:hover {
+  transform: scale(1.2);
 }
 
 /* homepage */
+.heading {
+  text-align: center;
+  font-size: 30px;
+  padding-bottom: 50px;
+}
+
 #homepage {
   width: 100%;
-  height: 80vh;
+  height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -30,17 +60,31 @@ nav {
 }
 
 /* login form */
-.login-options {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 40% 20% 40%;
-  justify-items: center;
-  align-items: center;
+#login-ID, #password, #login-account {
+  width: 500px;
+  height: 5vh;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  font-size: 20px;
 }
 
-.login-with-account-and-password, .login-different {
+::placeholder {
+  padding: 20px;
+}
+
+.login-with-account-and-password {
   display: flex;
   flex-direction: column;
+}
+
+#login-account {
+  background-color: #00E99E;
+  border: none;
+  cursor: pointer;
+}
+
+#login-account:hover {
+  transform: scale(.9);
 }
 
 .forgot-password {
@@ -51,3 +95,4 @@ nav {
 #signup {
   display: none;
 }
+
