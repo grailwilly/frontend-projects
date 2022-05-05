@@ -122,7 +122,7 @@ nav {
 
 .create-btn {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 #create-account {
@@ -133,6 +133,10 @@ nav {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.create-btn a {
+  color: #000;
 }
 
 
