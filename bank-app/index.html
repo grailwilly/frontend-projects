@@ -11,7 +11,7 @@
   <div id="main">
     <nav id="top-nav">
       <div class="logo">
-        <h1>BARYA.</h1>
+        <a href="index.html"><h1>BARYA.</h1></a>
       </div>
       <div class="menu">
         <ul class="nav-list">
@@ -46,23 +46,23 @@
             <input type="text" name="fname" placeholder="First Name" id="first-name" required />
             <input type="text" name="fname" placeholder="Last Name" id="last-name" required/>
           </div>
-          <div>
-            <input type="date" name="birth-date" id="birth-date" required />
+          <div class="birth-gender">
+            <input type="text" name="birth-date" id="birth-date" placeholder= "Birthdate" onfocus="(this.type = 'date')" required />
             <select name="gender" id="gender" required>
               <option value="female" id="female">Female</option>
               <option value="male" id="male">Male</option>
             </select>
           </div>
-          <div>
+          <div class="email-phone">
             <input type="email" name="email" id="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required/>
-            <input type="tel" name="phone" id="phone" placeholder="Format: 0920-000-0000" required />
+            <input type="tel" name="phone" id="phone" placeholder="0900000000" required />
           </div>
-          <div>
+          <div class="username-password">
             <input type="text" name="username" id="username" placeholder="Username" required>
             <input type="password" name="password" id="create-password" minlength="8" placeholder="Create Password" required>
           </div>
-          <div>
-            <input type="submit" value="Create New Account" id="create-account" />
+          <div class="create-btn">
+            <input type="submit" value="Create Account" id="create-account" />
           </div>
         </form>
       </div>

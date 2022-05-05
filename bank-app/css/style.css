@@ -18,6 +18,10 @@ nav {
   margin-right: 50px;
 }
 
+.logo a {
+  color: #000;
+}
+
 .nav-list {
   width: 100%;
   display: flex;
@@ -39,7 +43,7 @@ nav {
   cursor: pointer;
 }
 
-.sign-up:hover {
+.sign-up:hover, #create-account:hover {
   transform: scale(1.2);
 }
 
@@ -99,4 +103,36 @@ nav {
 #signup {
   display: none;
 }
+
+.client-name input, .birth-gender input, .email-phone input, .username-password input{
+  width: 300px;
+  height: 4vh;
+  font-size: 15px;
+  margin-bottom: 20px;
+  border: 2px solid #000;
+}
+
+.birth-gender select {
+  width: 305px;
+  height: 4.5vh;
+  font-size: 15px;
+  margin-bottom: 20px;
+  border: 2px solid #000;
+}
+
+.create-btn {
+  display: flex;
+  justify-content: center;
+}
+
+#create-account {
+  width: 300px;
+  background-color: #00E99E;
+  font-size: 15px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 
