@@ -1,0 +1,99 @@
+#logout-btn {
+  font-size: 15px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#logout-btn:hover {
+  background-color: #00E99E;
+  transform: scale(1.1);
+}
+
+#grid-css {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  padding: 20px;
+}
+
+.side-navbar {
+  border-right: 5px solid #00E99E;
+}
+
+.client-info {
+  display: grid;
+  grid-template-columns: 30% 40% 30%;
+  margin-bottom: 20px;
+}
+
+.name-number {
+  position: relative;
+  top: 15px;
+  left: -65px;
+}
+
+.name-display {
+  font-size: 25px;
+}
+
+.menu-title {
+  text-align: center;
+  font-size: 20px;
+  color: gray;
+}
+
+#transaction {
+  margin-bottom: 30px;
+}
+
+#transaction li {
+  list-style: none;
+}
+
+#transaction li:hover {
+  border-bottom: 1px solid #00E99E;
+  transform: scale(0.9);
+  cursor: pointer;
+}
+
+#transaction {
+  padding: 0;
+}
+
+.icon {
+  padding: 10px; 
+}
+
+.transaction-text {
+  width: 100%;
+  text-align: center;
+  font-size: 25px;
+  position: relative;
+  top: -15px;
+}
+
+.budget {
+  margin-bottom: 30px;
+}
+
+#budget-input {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 50px 50px 50px;
+}
+
+#budget-input select, #budget-input input, #budget-input button  {
+  height: 5vh;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+#budget-input button {
+  border: none;
+}
+
+#budget-input button:hover {
+  background-color: #00E99E;
+  transform: scale(0.8);
+}

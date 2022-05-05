@@ -5,9 +5,74 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bank App | Account</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/account.css">
 </head>
 <body>
-  <div>
+  <div id="main">
+    <nav id="top-nav">
+      <div class="logo">
+        <a href="index.html"><h1>BARYA.</h1></a>
+      </div>
+      <div class="menu">
+        <ul class="nav-list">
+          <li class="nav-items">Save</li>
+          <li class="nav-items">Shop</li>
+          <li class="nav-items">Invest</li>
+          <li class="nav-items">Donate</li>
+        </ul>
+      </div>
+      <div class="logOutBtn">
+        <button id="logout-btn">Log out</button>
+      </div>
+    </nav>
+    <div id="grid-css">
+      <div class="side-navbar">
+        <div class="client-info">
+          <div>
+            <img src="../assets/female-icon.png" alt="profile-picture" id="profile-picture">
+          </div>
+          <div class="name-number">
+            <p class="name-display">Full Name</p>
+            <p class="user-accountNumber">000-000-000</p>
+          </div>
+          <div>
+          <img src="../assets/setting-icon.png" />
+          </div>
+        </div>
+        <div>
+          <p class="menu-title">Transaction</p>
+          <ul id="transaction">
+            <li><img src="../assets/deposit-icon.png" class="icon" style="width: 30px;" /><span class="transaction-text">Deposit</span></li>
+            <li><img src="../assets/withdraw-icon.png" class="icon" style="width: 30px;" /><span class="transaction-text">Withdraw</span></li>
+            <li><img src="../assets/send-money-icon.png" class="icon" style="width: 40px;" /><span class="transaction-text">Send Money</span></li>
+            <li><img src="../assets/bill-payments-icon.png" class="icon" style="width: 30px;" /><span class="transaction-text">Bills Payment</span></li>
+          </ul>
+          <p class="menu-title budget">Budget Tracker</p>
+          <ul id="budget-input">
+            <select name="expense" id="expenses-option" >
+              <option value="expense" id="expense-type">Expense</option>
+              <option value="savings" id="savings-type">Savings</option>
+              <option value="investment" id="investment-type">Investment</option>
+            </select>
+            <input type="text" id="expense-description" placeholder="Description" />
+            <input type="text" id="expense-amount" placeholder="Amount" />
+            <button id="add-expense">Add Expense</button>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <p>chart</p>
+      </div>
+    </div>
+  </div>
+  <!-- <div id="modals">
+    <div id="deposit-modal">
+      <input type="text" id="deposit-value" />
+      <button class="deposit-btn">Deposit</button>
+    </div>
+  </div> -->
+  <!-- <div>
     <h1>Hello <span class="name">Grail</span></h1>
     <button id="logout-btn">Log out</button>
   </div>
@@ -57,7 +122,7 @@
       </tr>
       
     </table>
-  </div>
+  </div> -->
   <script src="../js/account.js"></script>
   <script src="../js/budget.js"></script>
 </body>
