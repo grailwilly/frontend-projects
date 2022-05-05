@@ -62,15 +62,44 @@
         </div>
       </div>
       <div>
-        <p>chart</p>
+        <div id="balance">
+          0
+        </div>
       </div>
     </div>
   </div>
   <div id="modals">
     <div id="deposit-modal">
       <div class="deposit-heading">
+        <h1>Deposit</h1>
+        <p>Save money on your account.</p>
       </div>
       <div class="deposit-input">
+        <input type="text" id="deposit-value" placeholder="Type amount" />
+        <button class="deposit-btn">Deposit</button>
+      </div>
+      <div class="close-modal">X</div>
+    </div>
+    <div id="withdrawal-modal">
+      <div class="deposit-heading">
+        <h1>Withdraw</h1>
+        <p>Spend money from your account</p>
+      </div>
+      <div class="deposit-input">
+        <input type="text" id="withdraw-value" placeholder="Type Amount" />
+        <button class="withdraw-btn">Widthraw</button>
+      </div>
+      <div class="close-modal">X</div>
+    </div>
+    <div id="sendMoney-modal">
+      <div class="deposit-heading">
+        <h1>Send Money</h1>
+        <p>Transfer from your account.</p>
+      </div>
+      <div class="deposit-input">
+        <input type="text" id="send-amount" placeholder="Type amount" />
+        <input type="text" id="send-account-number" placeholder="Recepient's account number" />
+        <button class="send-money-btn">Send Money</button>
       </div>
       <div class="close-modal">X</div>
     </div>
