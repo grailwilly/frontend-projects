@@ -1,7 +1,9 @@
 const logOutBtn = document.getElementById("logout-btn");
 const userName = document.querySelector(".name-display");
 const accountNumber = document.querySelector(".user-accountNumber");
-const balance = document.getElementById("balance")
+const balance = document.getElementById("balance");
+
+const profilePicture = document.getElementById("profile-picture");
 
 const depositInput = document.getElementById("deposit-value");
 const depositBtn = document.querySelector(".deposit-btn");
@@ -56,6 +58,12 @@ function displayUser() {
       userName.innerText = users[i].firstName;
       accountNumber.innerText = users[i].accountNumber;
       balance.innerText = users[i].balance;
+
+      if(users[i].gender === "female"){
+        profilePicture.setAttribute("src", "../assets/female-icon.png");
+      } else {
+        profilePicture.setAttribute("src", "../assets/male-icon.png");
+      }
     }
   }
 }
