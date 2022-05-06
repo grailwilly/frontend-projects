@@ -30,6 +30,7 @@
   background-color: #00E99E;
   font-size: 15px;
   margin-top: 20px;
+  cursor: pointer;
 }
 
 .admin-logout:hover {
