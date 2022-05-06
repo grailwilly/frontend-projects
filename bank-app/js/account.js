@@ -55,7 +55,7 @@ logOutBtn.addEventListener("click", () => {
 function displayUser() {
   for(let i = 0; i < users.length; i++) {
     if(users[i].status === "Active") {
-      userName.innerText = users[i].firstName;
+      userName.innerText = `${users[i].firstName} ${users[i].lastName}`;
       accountNumber.innerText = users[i].accountNumber;
       balance.innerText = users[i].balance;
 
