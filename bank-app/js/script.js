@@ -28,6 +28,11 @@ const createAccountBtn = document.getElementById("create-account");
 // Profile object
 const userArray = [];
 
+const admin = {
+  Id: 110693,
+  password: "adminaccess"
+}
+
 
 signUpBtn.addEventListener("click", () => {
   loginForm.style.display = "none";
@@ -93,9 +98,11 @@ function checkUser(users) {
       loginIdInput.value = "";
       loginPasswordInput.value = "";
       window.location = "pages/accountDashboard.html";
+    } else if(Number(loginIdInput.value) === admin.Id && loginPasswordInput.value === admin.password){
+      window.location = "pages/adminDashboard.html";
+      console.log("admin")
     }
   }
-
 }
 
 function storeUsersToLocalStorage() {
