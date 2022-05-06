@@ -157,6 +157,8 @@
   display: none;
 }
 
+/* balance */
+
 #balance-div h1 {
   text-align: center;
   font-size: 100px;
@@ -167,4 +169,22 @@
   font-size: 20px;
   color: gray;
 }
+
+hr {
+  text-align: center;
+  width: 80%;
+  margin: 20px 100px 20px 120px;
+}
+
+/* budget tracker */
+
+#expense-row, .budget-heading {
+  margin-right: 100px;
+  margin-left: 120px;
+  margin-bottom: 30px;
+  width: 80%;
+}
+
+
+
 
