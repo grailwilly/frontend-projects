@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Varela+Round&display=swap');
+ 
+* {
+  margin: 0;
+  font-family: 'Varela Round', sans-serif;
+
+}
+
+#grid-admin {
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+
+#admin-nav {
+  border-right: 5px solid #00E99E;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* font-size: 25px; */
+}
+
+#admin-nav img {
+  width: 100px;
+}
+
+.admin-logout button {
+  background-color: #00E99E;
+  font-size: 15px;
+  margin-top: 20px;
+}
+
+.admin-logout:hover {
+  transform: scale(1.1);
+}
+
+#users-list {
+  padding: 50px 20px 20px 20px;
+}
+
+#search-user {
+display: flex;
+justify-content: center;
+width: 100%;
+margin-top: 20px;
+margin-bottom: 50px;
+}
+
+#search-user input {
+  width: 50%;
+  font-size: 25px;
+}
+
+#search-user img {
+  background-color: #00E99E;
+}
+
+table {
+  width: 100%;
+}
+
+#table-heading {
+  text-align: left;
+}

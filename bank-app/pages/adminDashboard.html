@@ -5,20 +5,34 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bank App | Admin</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/admin.css">
 </head>
 <body>
-  <div id="admin-dashboard">
-    <h1>Hello Admin</h1>
-    <div id="account-list">
+  <div id="grid-admin">
+    <div id="admin-nav">
+      <div class="admin-profile">
+        <img src="../assets/admin.png" />
+        <p>Admin</p>
+        <p>Id: 110693</p>
+      </div>
+      <div class="admin-logout">
+        <button>Log out</button>
+      </div>
+    </div>
+    <div id="users-list">
+      <!-- <h1>Users List</h1> -->
+      <div id="search-user">
+        <input type="text" placeholder="Search ..." class="search-icon" />
+        <img src="../assets/search.png" />
+      </div>
       <table>
-        <tr>
+        <tr id="table-heading">
           <th>Account Number</th>
           <th>Account Name</th>
           <th>Balance</th>
           <th>Account Status</th>
         </tr>
-        <tr>
+        <tr id="users-info">
           <td id="account-number">90909090</td>
           <td id="fullname">Grail Willy</td>
           <td id="balance">100</td>
