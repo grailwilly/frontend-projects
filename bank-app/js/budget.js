@@ -9,7 +9,7 @@ let month = months[date.getMonth()];
 let day = date.getUTCDate();
 let year = date.getFullYear();
 
-const newExpense = document.getElementById("expense-row");
+const expenseTable = document.getElementById("expense-row");
 
 const expenseArray = [];
 
@@ -43,11 +43,27 @@ function updateExpenseToLocalStorage() {
 }
 
 function displayExpenses() {
+  // for(let i = 0; i < users.length; i++) {
+  //   for(let j = 0; j < users[i].expense.length; j++) {
+  //     // console.log(users[i].expense[j]);
+  //     // console.log(expenseArray);
+  //     if(users[i].status = "Active") {
+  //      const tr = document.createElement("tr");
+  //      tr.innerHTML = `
+  //       <td id="exp-date>${users[i].expense[j].dateNow}</td>
+  //       <td id="exp-type">${users[i].expense[j].expenseType}</td>
+  //       <td id="exp-description">${users[i].expense[j].description}</td>
+  //       <td id="exp-amount">${users[i].expense[j].amount}</td>
+  //       <td id="exp-action">Edit | Delete</td>
+  //      `
+
+  //      expenseTable.append(tr);
+  //     }
+  //   }
+  // }
   for(let i = 0; i < users.length; i++) {
-    for(let j = 0; j < users[i].expense.length; j++) {
-      console.log(users[i].expense[j]);
-      console.log(expenseArray);
-    }
+    console.log(users[i].expense[0].dateNow);
   }
 }
 
+displayExpenses();
