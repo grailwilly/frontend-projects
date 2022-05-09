@@ -25,9 +25,7 @@ const usernameInput = document.getElementById("username");
 const newPasswordInput = document.getElementById("create-password");
 const createAccountBtn = document.getElementById("create-account");
 
-// Profile object
-const userArray = [];
-
+// admin
 const admin = {
   Id: 110693,
   password: "adminaccess"
@@ -62,7 +60,7 @@ function addUser(fName, lName, birthDate, gender, email, phone, username, newPas
       password: newPassword,
       balance: 0,
       expenses: [],
-      status: "Active"
+      status: "Inactive"
     };
   
     userArray.push(userProfile);
@@ -104,7 +102,7 @@ function checkUser(users) {
       window.location = "pages/adminDashboard.html";
       console.log("admin")
     } else {
-      users[i].status = "Offlines";
+      users[i].status = "Inactive";
     }
   }
 }
