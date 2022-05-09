@@ -26,7 +26,6 @@ const depositModalInput = document.querySelector(".deposit-input");
 const closeModals = document.querySelectorAll(".close-modal");
 
 const users = JSON.parse(localStorage.getItem('users'));
-// console.log(users);
 
 depositBtn.addEventListener("click", (event) => {
   event.preventDefault();

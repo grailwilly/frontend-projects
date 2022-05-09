@@ -87,12 +87,10 @@ function addUser(fName, lName, birthDate, gender, email, phone, username, newPas
 }
 
 function checkUser(users) {
-  // console.log(users);
 
   for(let i = 0; i < users.length; i++) {
     if(users[i].accountNumber === Number(loginIdInput.value) && users[i].password === loginPasswordInput.value) {
       console.log(`${users[i].accountNumber} : Correct login`);
-      // window.location = "pages/adminDashboard.html";
       users[i].status = "Active";
       localStorage.setItem('users', JSON.stringify(users));
       loginIdInput.value = "";

@@ -45,8 +45,6 @@ function updateExpenseToLocalStorage() {
 function displayExpenses() {
   for(let i = 0; i < users.length; i++) {
     for(let j = 0; j < users[i].expenses.length; j++) {
-      // console.log(users[i].expense[j]);
-      // console.log(expenseArray);
       if(users[i].status = "Active") {
        const tr = document.createElement("tr");
        tr.innerHTML = `
