@@ -43,7 +43,8 @@ sendMoneyBtn.addEventListener("click", (event) => {
   sendMoney(Number(sendAmountInput.value), Number(sendAccountNumberInput.value));
 })
 
-logOutBtn.addEventListener("click", () => {
+logOutBtn.addEventListener("click", (e) => {
+  e.preventDefault();
   for(let i = 0; i < users.length; i++) {
     delete users[i].status;
     localStorage.setItem('users', JSON.stringify(users));

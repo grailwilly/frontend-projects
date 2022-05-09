@@ -60,7 +60,9 @@ function addUser(fName, lName, birthDate, gender, email, phone, username, newPas
       phone: phone,
       username: username,
       password: newPassword,
-      balance: 0
+      balance: 0,
+      expenses: [],
+      status: "Active"
     };
   
     userArray.push(userProfile);
@@ -93,7 +95,7 @@ function checkUser(users) {
     if(users[i].accountNumber === Number(loginIdInput.value) && users[i].password === loginPasswordInput.value) {
       console.log(`${users[i].accountNumber} : Correct login`);
       // window.location = "pages/adminDashboard.html";
-      users[i]['status'] = "Active";
+      users[i].status = "Active";
       localStorage.setItem('users', JSON.stringify(users));
       loginIdInput.value = "";
       loginPasswordInput.value = "";
@@ -101,6 +103,8 @@ function checkUser(users) {
     } else if(Number(loginIdInput.value) === admin.Id && loginPasswordInput.value === admin.password){
       window.location = "pages/adminDashboard.html";
       console.log("admin")
+    } else {
+      users[i].status = "Offlines";
     }
   }
 }

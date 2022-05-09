@@ -36,34 +36,30 @@ function addExpense(expenseType, description, amount) {
 function updateExpenseToLocalStorage() {
   for(let i = 0; i < users.length; i++) {
     if(users[i].status === "Active") {
-      users[i].expense = expenseArray;
+      users[i].expenses = expenseArray;
       localStorage.setItem('users', JSON.stringify(users));
     }
   }
 }
 
 function displayExpenses() {
-  // for(let i = 0; i < users.length; i++) {
-  //   for(let j = 0; j < users[i].expense.length; j++) {
-  //     // console.log(users[i].expense[j]);
-  //     // console.log(expenseArray);
-  //     if(users[i].status = "Active") {
-  //      const tr = document.createElement("tr");
-  //      tr.innerHTML = `
-  //       <td id="exp-date>${users[i].expense[j].dateNow}</td>
-  //       <td id="exp-type">${users[i].expense[j].expenseType}</td>
-  //       <td id="exp-description">${users[i].expense[j].description}</td>
-  //       <td id="exp-amount">${users[i].expense[j].amount}</td>
-  //       <td id="exp-action">Edit | Delete</td>
-  //      `
-
-  //      expenseTable.append(tr);
-  //     }
-  //   }
-  // }
   for(let i = 0; i < users.length; i++) {
-    console.log(users[i].expense[0].dateNow);
+    for(let j = 0; j < users[i].expenses.length; j++) {
+      // console.log(users[i].expense[j]);
+      // console.log(expenseArray);
+      if(users[i].status = "Active") {
+       const tr = document.createElement("tr");
+       tr.innerHTML = `
+        <td id="exp-date>${users[i].expenses[j].dateNow}</td>
+        <td id="exp-type">${users[i].expenses[j].expenseType}</td>
+        <td id="exp-description">${users[i].expenses[j].description}</td>
+        <td id="exp-amount">${users[i].expenses[j].amount}</td>
+        <td id="exp-action">Edit | Delete</td>
+       `
+       expenseTable.append(tr);
+      }
+    }
   }
 }
 
-displayExpenses();
+
