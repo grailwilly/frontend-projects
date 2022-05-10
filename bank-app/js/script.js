@@ -26,6 +26,8 @@ const newPasswordInput = document.getElementById("create-password");
 const createAccountBtn = document.getElementById("create-account");
 
 // admin
+const userArray = [];
+
 const admin = {
   Id: 110693,
   password: "adminaccess"

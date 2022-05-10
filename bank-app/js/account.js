@@ -141,5 +141,6 @@ sendMoneyLi.addEventListener("click", (event) => {
 closeModals.forEach((closeModal) => {
   closeModal.addEventListener("click", () => {
     modalContainer.style.display = "none";
+    window.location.reload();
   })
 })
