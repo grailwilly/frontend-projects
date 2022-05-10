@@ -15,6 +15,8 @@ const expenseArray = [];
 
 const Expense = function(expenseType, description, amount){
   let dateNow = `${month} ${day}, ${year}`;
+  let id = Math.floor(Math.random() * 100);
+  this.id = id;
   this.dateNow = dateNow;
   this.expenseType = expenseType;
   this.description = description;
@@ -48,6 +50,7 @@ function displayExpenses() {
       if(users[i].status = "Active") {
        const tr = document.createElement("tr");
        tr.innerHTML = `
+        <td id="exp-date>${users[i].expenses[j].id}</td>
         <td id="exp-date>${users[i].expenses[j].dateNow}</td>
         <td id="exp-type">${users[i].expenses[j].expenseType}</td>
         <td id="exp-description">${users[i].expenses[j].description}</td>
