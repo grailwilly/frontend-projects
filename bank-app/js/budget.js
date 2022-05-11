@@ -86,9 +86,9 @@ window.onload = function() {
 
 const ctx = document.getElementById("chart").getContext('2d');
 
-var xValues = ["Expenses", "Savings", "Investments"];
-var yValues = [55, 49, 44];
-var barColors = [
+const xValues = ["Expenses", "Savings", "Investments"];
+const yValues = [countExpenseType(), countSavingsType(), countInvestmentType()];
+const barColors = [
   "#b91d47",
   "#00aba9",
   "#2b5797"
@@ -102,14 +102,50 @@ new Chart(ctx, {
       backgroundColor: barColors,
       data: yValues
     }]
+  },
+  options: {
+    title: {
+      display: true,
+      text: "World Wide Wine Production 2018"
+    }
   }
-  // options: {
-  //   title: {
-  //     display: true,
-  //     text: "World Wide Wine Production 2018"
-  //   }
-  // }
 });
+
+function countExpenseType() {
+  let currentAccount = JSON.parse(localStorage.getItem("currentAccount"));
+  let expenses = currentAccount.expenses; 
+  let counter = 0;
+  for (const obj of expenses) {
+    if(obj.expenseType === "expense") {
+      counter++;
+    }
+  }
+  return counter;
+}
+
+function countSavingsType() {
+  let currentAccount = JSON.parse(localStorage.getItem("currentAccount"));
+  let expenses = currentAccount.expenses; 
+  let counter = 0;
+  for (const obj of expenses) {
+    if(obj.expenseType === "savings") {
+      counter++;
+    }
+  }
+  return counter;
+}
+
+function countInvestmentType() {
+  let currentAccount = JSON.parse(localStorage.getItem("currentAccount"));
+  let expenses = currentAccount.expenses; 
+  let counter = 0;
+  for (const obj of expenses) {
+    if(obj.expenseType === "investment") {
+      counter++;
+    }
+  }
+  return counter;
+}
 
 
 
