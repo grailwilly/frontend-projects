@@ -178,6 +178,11 @@ hr {
 
 /* budget tracker */
 
+.budget-heading {
+  display: flex;
+  justify-content: space-around;
+}
+
 #expense-row, .budget-heading {
   margin-right: 100px;
   margin-left: 120px;
