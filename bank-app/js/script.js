@@ -48,44 +48,53 @@ createAccountBtn.addEventListener("click", (event) => {
 loginAccountBtn.addEventListener("click", getUsersFromLocalStorage);
 
 function addUser(fName, lName, birthDate, gender, email, phone, username, newPassword) {
+  let users = JSON.parse(localStorage.getItem('users'));
+  // console.log(users);
+  let found = Array.from(users).filter(user => {
+    user.username === username
+  })
 
-  if(fName !== '' && lName !== '' && birthDate !== '' && gender !== '' && email !== '' && phone !== '' && username !== '' && newPassword !== '') {
-    const userProfile = {
-      accountNumber: Math.floor(Math.random() * 10000000),
-      firstName: fName,
-      lastName: lName,
-      birthDate: birthDate,
-      gender: gender ,
-      email: email,
-      phone: phone,
-      username: username,
-      password: newPassword,
-      balance: 0,
-      expenses: [],
-      status: "Inactive"
-    };
+  // console.log(found);
+
+  if(found) return alert("Already Found");
+
+  // if(fName !== '' && lName !== '' && birthDate !== '' && gender !== '' && email !== '' && phone !== '' && username !== '' && newPassword !== '') {
+  //   const userProfile = {
+  //     accountNumber: Math.floor(Math.random() * 10000000),
+  //     firstName: fName,
+  //     lastName: lName,
+  //     birthDate: birthDate,
+  //     gender: gender ,
+  //     email: email,
+  //     phone: phone,
+  //     username: username,
+  //     password: newPassword,
+  //     balance: 0,
+  //     expenses: [],
+  //     status: "Inactive"
+  //   };
   
-    userArray.push(userProfile);
-    storeUsersToLocalStorage(userArray);
-    console.log(userArray);
+  //   userArray.push(userProfile);
+  //   storeUsersToLocalStorage(userArray);
+  //   console.log(userArray);
   
-    firstNameInput.value = "";
-    lastNameInput.value = "";
-    birthDateInput.value = "";
-    genderInput.value = "";
-    emailInput.value = "";
-    phoneInput.value = "";
-    usernameInput.value = "";
-    newPasswordInput.value = "";
+  //   firstNameInput.value = "";
+  //   lastNameInput.value = "";
+  //   birthDateInput.value = "";
+  //   genderInput.value = "";
+  //   emailInput.value = "";
+  //   phoneInput.value = "";
+  //   usernameInput.value = "";
+  //   newPasswordInput.value = "";
 
-    alert("Created Account");
-    loginForm.style.display = "block";
-    signupContainer.style.display = "none";
-    titleText.innerText = "Login To Your Account";
+  //   alert("Created Account");
+  //   loginForm.style.display = "block";
+  //   signupContainer.style.display = "none";
+  //   titleText.innerText = "Login To Your Account";
 
-  } else {
-    alert("Please require fields");
-  }
+  // } else {
+  //   alert("Please require fields");
+  // }
 }
 
 function checkUser(users) {

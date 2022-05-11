@@ -33,6 +33,8 @@ function addExpense(expenseType, description, amount) {
   let newExpense = new Expense(expenseType, description, amount);
   expenseArray.push(newExpense);
   updateExpenseToLocalStorage();
+  expenseDescriptionInput.value = "";
+  expenseAmountInput.value = "";
 }
 
 function updateExpenseToLocalStorage() {
