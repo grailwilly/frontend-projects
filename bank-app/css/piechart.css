@@ -1,4 +1,4 @@
-#piechart {
+/* #piechart {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,4 +10,9 @@
     lightblue 0 235deg,
     orange 0
   );
+} */
+
+#chart {
+  width: 100%;
+  max-width: 600px;
 }
