@@ -72,7 +72,7 @@ function displayExpenses() {
         <td id="exp-date>${expenses[j].dateNow}</td>
         <td id="exp-type">${expenses[j].expenseType}</td>
         <td id="exp-description">${expenses[j].description}</td>
-        <td id="exp-amount">${expenses[j].amount}</td>
+        <td id="exp-amount">${expenses[j].amount.toLocaleString('en')}</td>
         <td id="exp-action">Edit | Delete</td>
        `
        expenseTable.append(tr);
@@ -157,7 +157,8 @@ function totalBudget() {
   for (const obj of expenses) {
     total += obj.amount;
   }
-  totalAmount.innerText = total
+  
+  totalAmount.innerHTML = total.toLocaleString('en');
 }
 
 totalBudget();

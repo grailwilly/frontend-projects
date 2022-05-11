@@ -58,7 +58,7 @@ function displayUser() {
     if(users[i].status === "Active") {
       userName.innerText = `${users[i].firstName} ${users[i].lastName}`;
       accountNumber.innerText = users[i].accountNumber;
-      balance.innerText = users[i].balance;
+      balance.innerText = users[i].balance.toLocaleString('en');
 
       if(users[i].gender === "female"){
         profilePicture.setAttribute("src", "../assets/female-icon.png");
