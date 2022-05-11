@@ -26,6 +26,7 @@ const depositModalInput = document.querySelector(".deposit-input");
 const closeModals = document.querySelectorAll(".close-modal");
 
 const users = JSON.parse(localStorage.getItem('users'));
+let currentAccount = JSON.parse(localStorage.getItem('currentAccount'));
 
 depositBtn.addEventListener("click", (event) => {
   event.preventDefault();
@@ -45,7 +46,7 @@ sendMoneyBtn.addEventListener("click", (event) => {
 logOutBtn.addEventListener("click", (e) => {
   e.preventDefault();
   for(let i = 0; i < users.length; i++) {
-    delete users[i].status;
+    users[i].status = "Inactive";
     localStorage.setItem('users', JSON.stringify(users));
     window.location = "../index.html";
     console.log(users)
@@ -72,7 +73,9 @@ function deposit(amount) {
   for(let i = 0; i < users.length; i++) {
     if(users[i].status === "Active") {
       users[i].balance = Number(users[i].balance) + amount;
+      currentAccount.balance = users[i].balance;
       localStorage.setItem('users', JSON.stringify(users));
+      localStorage.setItem('currentAccount', JSON.stringify(currentAccount))
       depositInput.value = "";
       console.log(users)
     }
@@ -83,7 +86,9 @@ function withdraw(amount) {
   for(let i = 0; i < users.length; i++) {
     if(users[i].status === "Active") {
       users[i].balance = Number(users[i].balance) - amount;
+      currentAccount.balance = users[i].balance;
       localStorage.setItem('users', JSON.stringify(users));
+      localStorage.setItem('currentAccount', JSON.stringify(currentAccount))
       withdrawInput.value = "";
       console.log(users)
     }
@@ -94,7 +99,9 @@ function sendMoney(amount, accountNumber) {
   for(let i = 0; i < users.length; i++) {
     if(users[i].status === "Active") {
       users[i].balance = Number(users[i].balance) - amount;
+      currentAccount.balance = users[i].balance;
       localStorage.setItem('users', JSON.stringify(users));
+      localStorage.setItem('currentAccount', JSON.stringify(currentAccount))
       sendAmountInput.value = "";
       sendAccountNumberInput.value = "";
       console.log(users)
@@ -102,7 +109,9 @@ function sendMoney(amount, accountNumber) {
 
     if(users[i].accountNumber === Number(accountNumber)) {
       users[i].balance = Number(users[i].balance) + amount;
+      currentAccount.balance = users[i].balance;
       localStorage.setItem('users', JSON.stringify(users));
+      localStorage.setItem('currentAccount', JSON.stringify(currentAccount))
       console.log(users)
     }
       

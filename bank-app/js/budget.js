@@ -26,43 +26,60 @@ const Expense = function(expenseType, description, amount){
 addExpenseBtn.addEventListener("click", (event) => {
   event.preventDefault();
   addExpense(expenseTypeInput.value, expenseDescriptionInput.value, Number(expenseAmountInput.value));
-  displayExpenses();
+  let currentAccount = JSON.parse(localStorage.getItem("currentAccount"));
+  let lastItem = currentAccount.expenses[currentAccount.expenses.length - 1];
+   const tr = document.createElement("tr");
+       tr.innerHTML = `
+        <td id="exp-date>${lastItem.id}</td>
+        <td id="exp-date>${lastItem.dateNow}</td>
+        <td id="exp-type">${lastItem.expenseType}</td>
+        <td id="exp-description">${lastItem.description}</td>
+        <td id="exp-amount">${lastItem.amount}</td>
+        <td id="exp-action">Edit | Delete</td>
+       `
+    expenseTable.prepend(tr);
 })
 
 function addExpense(expenseType, description, amount) {
+  let users = JSON.parse(localStorage.getItem("users"));
+  let currentAccount = JSON.parse(localStorage.getItem("currentAccount"));
+
   let newExpense = new Expense(expenseType, description, amount);
-  expenseArray.push(newExpense);
-  updateExpenseToLocalStorage();
+  currentAccount.expenses.push(newExpense);
+  localStorage.setItem("currentAccount", JSON.stringify(currentAccount));
+  let user = Array.from(users).find(user => {
+    return user.accountNumber === currentAccount.accountNumber;
+  })
+  user.expenses = currentAccount.expenses;
+    console.log(users);
+  updateExpenseToLocalStorage(users);
   expenseDescriptionInput.value = "";
   expenseAmountInput.value = "";
 }
 
-function updateExpenseToLocalStorage() {
-  for(let i = 0; i < users.length; i++) {
-    if(users[i].status === "Active") {
-      users[i].expenses = expenseArray;
-      localStorage.setItem('users', JSON.stringify(users));
-    }
-  }
+function updateExpenseToLocalStorage(users) {
+  localStorage.setItem('users', JSON.stringify(users));
 }
 
 function displayExpenses() {
-  for(let i = 0; i < users.length; i++) {
-    for(let j = 0; j < users[i].expenses.length; j++) {
-      if(users[i].status = "Active") {
+  let currentAccount = JSON.parse(localStorage.getItem("currentAccount"));
+  let expenses = currentAccount.expenses.reverse();
+    for(let j = 0; j < expenses.length; j++) {
        const tr = document.createElement("tr");
        tr.innerHTML = `
-        <td id="exp-date>${users[i].expenses[j].id}</td>
-        <td id="exp-date>${users[i].expenses[j].dateNow}</td>
-        <td id="exp-type">${users[i].expenses[j].expenseType}</td>
-        <td id="exp-description">${users[i].expenses[j].description}</td>
-        <td id="exp-amount">${users[i].expenses[j].amount}</td>
+        <td id="exp-date>${expenses[j].id}</td>
+        <td id="exp-date>${expenses[j].dateNow}</td>
+        <td id="exp-type">${expenses[j].expenseType}</td>
+        <td id="exp-description">${expenses[j].description}</td>
+        <td id="exp-amount">${expenses[j].amount}</td>
         <td id="exp-action">Edit | Delete</td>
        `
        expenseTable.append(tr);
-      }
     }
-  }
+}
+
+window.onload = function() {
+  displayExpenses();
 }
 
 

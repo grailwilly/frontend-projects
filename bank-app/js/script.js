@@ -49,52 +49,50 @@ loginAccountBtn.addEventListener("click", getUsersFromLocalStorage);
 
 function addUser(fName, lName, birthDate, gender, email, phone, username, newPassword) {
   let users = JSON.parse(localStorage.getItem('users'));
-  // console.log(users);
-  let found = Array.from(users).filter(user => {
-    user.username === username
+  let found = Array.from(users).find(user => {
+    return user.username === username
   })
 
-  // console.log(found);
 
   if(found) return alert("Already Found");
 
-  // if(fName !== '' && lName !== '' && birthDate !== '' && gender !== '' && email !== '' && phone !== '' && username !== '' && newPassword !== '') {
-  //   const userProfile = {
-  //     accountNumber: Math.floor(Math.random() * 10000000),
-  //     firstName: fName,
-  //     lastName: lName,
-  //     birthDate: birthDate,
-  //     gender: gender ,
-  //     email: email,
-  //     phone: phone,
-  //     username: username,
-  //     password: newPassword,
-  //     balance: 0,
-  //     expenses: [],
-  //     status: "Inactive"
-  //   };
+  if(fName !== '' && lName !== '' && birthDate !== '' && gender !== '' && email !== '' && phone !== '' && username !== '' && newPassword !== '') {
+    const userProfile = {
+      accountNumber: Math.floor(Math.random() * 10000000),
+      firstName: fName,
+      lastName: lName,
+      birthDate: birthDate,
+      gender: gender ,
+      email: email,
+      phone: phone,
+      username: username,
+      password: newPassword,
+      balance: 0,
+      expenses: [],
+      status: "Inactive"
+    };
   
-  //   userArray.push(userProfile);
-  //   storeUsersToLocalStorage(userArray);
-  //   console.log(userArray);
+    users.push(userProfile);
+    storeUsersToLocalStorage(users);
+    console.log(users);
   
-  //   firstNameInput.value = "";
-  //   lastNameInput.value = "";
-  //   birthDateInput.value = "";
-  //   genderInput.value = "";
-  //   emailInput.value = "";
-  //   phoneInput.value = "";
-  //   usernameInput.value = "";
-  //   newPasswordInput.value = "";
+    firstNameInput.value = "";
+    lastNameInput.value = "";
+    birthDateInput.value = "";
+    genderInput.value = "";
+    emailInput.value = "";
+    phoneInput.value = "";
+    usernameInput.value = "";
+    newPasswordInput.value = "";
 
-  //   alert("Created Account");
-  //   loginForm.style.display = "block";
-  //   signupContainer.style.display = "none";
-  //   titleText.innerText = "Login To Your Account";
+    alert("Created Account");
+    loginForm.style.display = "block";
+    signupContainer.style.display = "none";
+    titleText.innerText = "Login To Your Account";
 
-  // } else {
-  //   alert("Please require fields");
-  // }
+  } else {
+    alert("Please require fields");
+  }
 }
 
 function checkUser(users) {
@@ -103,6 +101,7 @@ function checkUser(users) {
     if(users[i].accountNumber === Number(loginIdInput.value) && users[i].password === loginPasswordInput.value) {
       console.log(`${users[i].accountNumber} : Correct login`);
       users[i].status = "Active";
+      localStorage.setItem('currentAccount', JSON.stringify(users[i]))
       localStorage.setItem('users', JSON.stringify(users));
       loginIdInput.value = "";
       loginPasswordInput.value = "";
@@ -116,8 +115,8 @@ function checkUser(users) {
   }
 }
 
-function storeUsersToLocalStorage() {
-  localStorage.setItem('users', JSON.stringify(userArray));
+function storeUsersToLocalStorage(users) {
+  localStorage.setItem('users', JSON.stringify(users));
 }
 
 function getUsersFromLocalStorage() {
