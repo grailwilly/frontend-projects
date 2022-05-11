@@ -38,6 +38,7 @@ addExpenseBtn.addEventListener("click", (event) => {
         <td id="exp-action">Edit | Delete</td>
        `
     expenseTable.prepend(tr);
+  window.location.reload();
 })
 
 function addExpense(expenseType, description, amount) {
