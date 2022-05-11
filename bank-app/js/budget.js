@@ -148,5 +148,16 @@ function countInvestmentType() {
   return counter;
 }
 
+// total budget
+function totalBudget() {
+  const totalAmount = document.querySelector(".total-budget")
+  let currentAccount = JSON.parse(localStorage.getItem("currentAccount"));
+  let expenses = currentAccount.expenses;
+  let total = 0;
+  for (const obj of expenses) {
+    total += obj.amount;
+  }
+  totalAmount.innerText = total;
+}
 
-
+totalBudget();
