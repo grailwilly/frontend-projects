@@ -107,7 +107,7 @@ new Chart(ctx, {
   options: {
     title: {
       display: true,
-      text: "World Wide Wine Production 2018"
+      text: "Expenses 2022"
     }
   }
 });
@@ -157,7 +157,7 @@ function totalBudget() {
   for (const obj of expenses) {
     total += obj.amount;
   }
-  totalAmount.innerText = total;
+  totalAmount.innerText = total
 }
 
 totalBudget();
