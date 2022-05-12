@@ -30,8 +30,7 @@ addExpenseBtn.addEventListener("click", (event) => {
   let lastItem = currentAccount.expenses[currentAccount.expenses.length - 1];
    const tr = document.createElement("tr");
        tr.innerHTML = `
-        <td id="exp-date>${lastItem.id}</td>
-        <td id="exp-date>${lastItem.dateNow}</td>
+        <td id="exp-date">${lastItem.dateNow}</td>
         <td id="exp-type">${lastItem.expenseType}</td>
         <td id="exp-description">${lastItem.description}</td>
         <td id="exp-amount">${lastItem.amount}</td>
@@ -67,13 +66,13 @@ function displayExpenses() {
   let expenses = currentAccount.expenses.reverse();
     for(let j = 0; j < expenses.length; j++) {
        const tr = document.createElement("tr");
+       tr.setAttribute('data-key', expenses[j].id)
        tr.innerHTML = `
-        <td id="exp-date>${expenses[j].id}</td>
-        <td id="exp-date>${expenses[j].dateNow}</td>
+        <td id="exp-date">${expenses[j].dateNow}</td>
         <td id="exp-type">${expenses[j].expenseType}</td>
         <td id="exp-description">${expenses[j].description}</td>
         <td id="exp-amount">${expenses[j].amount.toLocaleString('en')}</td>
-        <td id="exp-action">Edit | Delete</td>
+        <td id="exp-action"><span class="edit-exp">Edit</span> | <span class="delete-exp">Delete</span></td>
        `
        expenseTable.append(tr);
     }
