@@ -32,7 +32,7 @@ addExpenseBtn.addEventListener("click", (event) => {
         <td id="exp-type">${lastItem.expenseType}</td>
         <td id="exp-description">${lastItem.description}</td>
         <td id="exp-amount">${lastItem.amount}</td>
-        <td id="exp-Edit"><button>Edit</button></td>
+        <td id="exp-edit" data-key=${lastItem.id}><button>Edit</button></td>
         <td id="exp-delete" data-key=${lastItem.id}><button>Delete</button></td>
        `
     expenseTable.prepend(lastItem);
@@ -71,7 +71,7 @@ function displayExpenses() {
         <td id="exp-type">${expenses[j].expenseType}</td>
         <td id="exp-description">${expenses[j].description}</td>
         <td id="exp-amount">${expenses[j].amount.toLocaleString('en')}</td>
-        <td id="exp-Edit"><button>Edit</button></td>
+        <td id="exp-edit" data-key=${expenses[j].id}><button>Edit</button></td>
         <td id="exp-delete" data-key=${expenses[j].id}><button>Delete</button></td>
        `
        expenseTable.append(tr);
@@ -82,6 +82,7 @@ window.onload = function() {
   displayExpenses();
 
   const deleteExpBtns = document.querySelectorAll("#exp-delete");
+  const editExpBtns = document.querySelectorAll("#exp-edit");
 
   deleteExpBtns.forEach(function (deleteBtn){
     deleteBtn.addEventListener("click", (e) => {
@@ -100,4 +101,40 @@ window.onload = function() {
       window.location.reload();
     })
   })
+
+  const editExpModal = document.getElementById("edit-exp-modal");
+  const updateExpenseType = document.getElementById("update-expenses-option");
+  const updateExpenseDesc = document.getElementById("update-expense-description");
+  const  updateExpenseAmount = document.getElementById("update-expense-amount");
+  const updateExpenseBtn = document.getElementById("update-expense");
+  
+  editExpBtns.forEach(function (editBtn){
+    editBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+  
+      let currentAccount = JSON.parse(localStorage.getItem("currentAccount"));
+      let expenses = currentAccount.expenses;
+      let findExp = Array.from(expenses).find(expense => {
+        return expense.id === Number(editBtn.getAttribute("data-key"))
+        console.log(expense.id);
+      })
+      
+      editExpModal.style.display = "block";
+      updateExpenseType.value = `${findExp.expenseType}`;
+      updateExpenseDesc.value = `${findExp.description}`;
+      updateExpenseAmount.value = `${findExp.amount}`;
+
+      if(findExp) {
+        updateExpenseBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        findExp.expenseType = updateExpenseType.value;
+        findExp.description = updateExpenseDesc.value;
+        findExp.amount = parseInt(updateExpenseAmount.value);
+        localStorage.setItem("currentAccount", JSON.stringify(currentAccount));
+        window.location.reload();
+      })
+      }     
+    })
+  })
+
 }

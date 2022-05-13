@@ -138,7 +138,23 @@
       <p>Gender</p>
     </div>
     <div class="close-setting">X</div>
+  </div>s
+
+  <div id="edit-exp-modal">
+    <h1>Edit Expense</h1>
+    <div id="edit-exp-value">
+      <select name="expense" id="update-expenses-option" >
+        <option value="expense" id="update-expense-type">Expense</option>
+        <option value="savings" id="update-savings-type">Savings</option>
+        <option value="investment" id="update-investment-type">Investment</option>
+      </select>
+      <input type="text" id="update-expense-description" placeholder="Description" />
+      <input type="text" id="update-expense-amount" placeholder="Amount" />
+      <button id="update-expense">Update Expense</button>
+    </div>
+    <div class="close-update-exp">X</div>
   </div>
+
   <script src="../js/account.js"></script>
   <script src="../js/budget.js"></script>
   <script src="../js/chart.js"></script>

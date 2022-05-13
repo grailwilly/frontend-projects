@@ -219,8 +219,49 @@ th {
 .close-setting {
   position: relative;
   top: -270px;
-  left: 500px;
+  left: 350px;
   font-size: 30px;
   cursor: pointer;
 }
+
+/* expense edit */
+#edit-exp-modal {
+  display: none;
+  background-color: #00E99E;
+  position: absolute;
+  width: 30%;
+  height: 40vh;
+  top: 25%;
+  left: 20%;
+  border: 1px solid #00E99E;
+}
+
+#edit-exp-modal h1 {
+  text-align: center;
+  padding: 20px;
+}
+
+#edit-exp-value {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+#update-expenses-option, #update-expense-description, #update-expense-amount {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+#update-expense {
+  font-size: 20px;
+}
+
+.close-update-exp {
+  position: relative;
+  top: -280px;
+  left: 350px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
 
