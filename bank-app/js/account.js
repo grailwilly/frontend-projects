@@ -25,6 +25,11 @@ const depositHeading = document.querySelector(".deposit-heading");
 const depositModalInput = document.querySelector(".deposit-input");
 const closeModals = document.querySelectorAll(".close-modal");
 
+const settingIcon = document.querySelector(".setting");
+const settingModal = document.getElementById("setting-modal");
+const profile = document.querySelector(".profile");
+const settingClose = document.querySelector(".close-setting")
+
 const users = JSON.parse(localStorage.getItem('users'));
 let currentAccount = JSON.parse(localStorage.getItem('currentAccount'));
 
@@ -59,6 +64,15 @@ function displayUser() {
       userName.innerText = `${users[i].firstName} ${users[i].lastName}`;
       accountNumber.innerText = users[i].accountNumber;
       balance.innerText = users[i].balance.toLocaleString('en');
+
+      profile.innerHTML = `
+        <h1>Profile</h1>
+        <p>Full Name: ${users[i].firstName} ${users[i].lastName}</p>
+        <p>Gender: ${users[i].gender}</p>
+        <p>Birthdate: ${users[i].birthDate}</p>
+        <p>Email: ${users[i].email}</p>
+        <p>Phone: ${users[i].phone}</p>
+      `
 
       if(users[i].gender === "female"){
         profilePicture.setAttribute("src", "../assets/female-icon.png");
@@ -152,4 +166,13 @@ closeModals.forEach((closeModal) => {
     modalContainer.style.display = "none";
     window.location.reload();
   })
+})
+
+settingIcon.addEventListener("click", () => {
+  settingModal.style.display = "block";
+  displayUser();
+})
+
+settingClose.addEventListener("click", () => {
+  settingModal.style.display = "none";
 })

@@ -194,3 +194,33 @@ th {
   text-align: left;
 }
 
+/* setting profile */
+
+#setting-modal {
+  display: none;
+  background-color: #00E99E;
+  position: absolute;
+  width: 30%;
+  height: 40vh;
+  top: 25%;
+  left: 20%;
+  border: 1px solid #00E99E;
+}
+
+.profile {
+  padding: 50px;
+}
+
+.profile h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.close-setting {
+  position: relative;
+  top: -270px;
+  left: 500px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
