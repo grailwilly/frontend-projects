@@ -93,6 +93,8 @@ window.onload = function() {
         return expense.id === Number(deleteBtn.getAttribute("data-key"))
       })
 
+      // console.log(index)
+
       if( index > -1) {
         expenses.splice(index, 1);
       }
